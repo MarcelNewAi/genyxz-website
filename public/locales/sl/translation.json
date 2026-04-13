@@ -1,58 +1,58 @@
 {
   "site": {
-    "title": "",
-    "tagline": "",
-    "description": ""
+    "title": "GenYXZ",
+    "tagline": "Nova generacija, ki razume prihodnost zdravja.",
+    "description": "Skupnost ambasadorjev, ki povezuje znanje, ljudi in sodobne rešitve."
   },
   "nav": {
-    "domov": "",
-    "o-nas": "",
-    "kaj-delamo": "",
-    "partnerji": "",
-    "ambasadorji": "",
-    "kontakt": "",
-    "cta": ""
+    "domov": "Domov",
+    "o-nas": "O nas",
+    "kaj-delamo": "Kaj delamo",
+    "partnerji": "Partnerji",
+    "ambasadorji": "Ambasadorji",
+    "kontakt": "Kontakt",
+    "cta": "Postani ambasador"
   },
   "pages": {
     "domov": {
-      "hero_title": "",
+      "hero_title": "Domov",
       "hero_subtitle": "",
-      "hero_text": "",
+      "hero_text": "Nova generacija, ki razume prihodnost zdravja.",
       "cta_primary": "",
       "cta_secondary": ""
     },
     "o-nas": {
-      "title": "",
+      "title": "O nas",
       "kaj_je_title": "",
-      "kaj_je_text": "",
+      "kaj_je_text": "GenYXZ povezuje mlade z znanjem o sodobnih pristopih k zdravju.",
       "vizija_title": "",
       "vizija_text": "",
       "simbol_title": "",
       "simbol_text": ""
     },
     "kaj-delamo": {
-      "title": "",
-      "intro": "",
+      "title": "Kaj delamo",
+      "intro": "Ambasadorji delujejo v okolju preventive, sodobne medicine in dolgoročne zaščite.",
       "povezava_title": "",
       "povezava_text": ""
     },
     "partnerji": {
-      "title": "",
+      "title": "Partnerji",
       "subtitle": "",
-      "intro": ""
+      "intro": "Okolje, v katerem delujemo."
     },
     "ambasadorji": {
-      "title": "",
+      "title": "Ambasadorji",
       "kdo_title": "",
       "kdo_text": "",
       "kaj_pridobis_title": "",
       "pridruzi_title": "",
-      "pridruzi_text": "",
+      "pridruzi_text": "Pridruži se skupnosti ambasadorjev.",
       "cta": ""
     },
     "kontakt": {
-      "title": "",
-      "subtitle": ""
+      "title": "Kontakt",
+      "subtitle": "Stopi v stik z nami."
     }
   },
   "cookie": {
@@ -65,13 +65,13 @@
   },
   "footer": {
     "copyright": "",
-    "privacy": "",
-    "terms": "",
-    "credit": ""
+    "privacy": "Zasebnost",
+    "terms": "Pogoji",
+    "credit": "GenYXZ"
   },
   "404": {
-    "title": "",
-    "message": "",
-    "back_home": ""
+    "title": "Stran ne obstaja",
+    "message": "Ups, ta stran ne obstaja.",
+    "back_home": "Nazaj na domačo stran"
   }
 }
