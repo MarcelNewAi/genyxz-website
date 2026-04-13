@@ -115,7 +115,7 @@ Scaffold the project, configure all tooling, build the HTML structure.
 
 Add i18n, routing, dark mode, and error handling.
 
-- [ ] **2.1** i18next installed and configured using Context7 docs
+- [x] **2.1** i18next installed and configured using Context7 docs
   - [ ] Translation JSON files created for all languages
   - [ ] Browser language detection enabled
   - [ ] Language preference saved in cookie
@@ -252,5 +252,6 @@ GenYXZ je skupnost ambasadorjev, ki povezuje mlade z znanjem o sodobnih pristopi
 
 ### Important Company Information
 Not provided
+
 
 

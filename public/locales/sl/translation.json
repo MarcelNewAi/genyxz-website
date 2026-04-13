@@ -1,1 +1,77 @@
-{}
+{
+  "site": {
+    "title": "",
+    "tagline": "",
+    "description": ""
+  },
+  "nav": {
+    "domov": "",
+    "o-nas": "",
+    "kaj-delamo": "",
+    "partnerji": "",
+    "ambasadorji": "",
+    "kontakt": "",
+    "cta": ""
+  },
+  "pages": {
+    "domov": {
+      "hero_title": "",
+      "hero_subtitle": "",
+      "hero_text": "",
+      "cta_primary": "",
+      "cta_secondary": ""
+    },
+    "o-nas": {
+      "title": "",
+      "kaj_je_title": "",
+      "kaj_je_text": "",
+      "vizija_title": "",
+      "vizija_text": "",
+      "simbol_title": "",
+      "simbol_text": ""
+    },
+    "kaj-delamo": {
+      "title": "",
+      "intro": "",
+      "povezava_title": "",
+      "povezava_text": ""
+    },
+    "partnerji": {
+      "title": "",
+      "subtitle": "",
+      "intro": ""
+    },
+    "ambasadorji": {
+      "title": "",
+      "kdo_title": "",
+      "kdo_text": "",
+      "kaj_pridobis_title": "",
+      "pridruzi_title": "",
+      "pridruzi_text": "",
+      "cta": ""
+    },
+    "kontakt": {
+      "title": "",
+      "subtitle": ""
+    }
+  },
+  "cookie": {
+    "message": "",
+    "accept": "",
+    "decline": "",
+    "settings": "",
+    "necessary": "",
+    "save_preferences": ""
+  },
+  "footer": {
+    "copyright": "",
+    "privacy": "",
+    "terms": "",
+    "credit": ""
+  },
+  "404": {
+    "title": "",
+    "message": "",
+    "back_home": ""
+  }
+}
