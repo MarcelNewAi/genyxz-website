@@ -137,17 +137,17 @@ Add i18n, routing, dark mode, and error handling.
 
 Fill all pages with actual content using the i18n system and respecting dark mode.
 
-- [ ] **3.1** All translation files populated with real content (all languages)
-- [ ] **3.2** Each page built out with sections and components
-  - [ ] All content rendered via i18n translation keys
-  - [ ] All components styled with Tailwind (including `dark:` variants if applicable)
-  - [ ] Responsive layout verified on mobile (< 768px)
-- [ ] **3.3** Images and assets added (from GCS URLs in INFO.md)
-  - [ ] Alt text set via i18n keys
-- [ ] **3.4** Navigation fully functional
-  - [ ] All page links working
-  - [ ] Mobile menu working
-  - [ ] Language switcher in nav
+- [x] **3.1** All translation files populated with real content (all languages)
+- [x] **3.2** Each page built out with sections and components
+  - [x] All content rendered via i18n translation keys
+  - [x] All components styled with Tailwind (including `dark:` variants if applicable)
+  - [x] Responsive layout verified on mobile (< 768px)
+- [x] **3.3** Images and assets added (from GCS URLs in INFO.md)
+  - [x] Alt text set via i18n keys
+- [x] **3.4** Navigation fully functional
+  - [x] All page links working
+  - [x] Mobile menu working
+  - [x] Language switcher in nav (N/A — single-language Slovenian website)
 
 ---
 
