@@ -82,10 +82,10 @@ Define everything about what we're building before writing any code.
 
 Scaffold the project, configure all tooling, build the HTML structure.
 
-- [ ] **1.1** Vite (React) project initialized
+- [x] **1.1** Vite (React) project initialized
 - [ ] **1.2** `netlify.toml` created (build command, publish dir, redirects, security headers, caching)
 - [ ] **1.3** Netlify CLI linked to site (`netlify link` or `netlify sites:create`)
-- [ ] **1.4** Tailwind CSS installed and configured using Context7 docs
+- [x] **1.4** Tailwind CSS installed and configured using Context7 docs
   - [ ] Global CSS theme: colors, fonts, scrollbar, buttons, cards, calendar, modules
   - [ ] Mobile-first responsive breakpoints (< 768px optimization)
   - [ ] Custom component styles defined
