@@ -41,7 +41,7 @@ export default function KajDelamo() {
 
   return (
     <>
-      <section className="section-block section-bg">
+      <section className="section-block section-bg page-hero">
         <div className="layout-container editorial-block">
           <p className="section-label" data-reveal>
             {t('labels.kaj_delamo')}

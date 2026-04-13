@@ -1,1 +1,1 @@
-export const AMBASSADOR_URL = 'https://prijava.genyxz.si'
+export const AMBASSADOR_URL = 'https://genxyz-osnutek.netlify.app/'

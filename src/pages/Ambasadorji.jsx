@@ -20,7 +20,7 @@ export default function Ambasadorji() {
 
   return (
     <>
-      <section className="section-block section-navy">
+      <section className="section-block section-navy page-hero">
         <div className="layout-container editorial-block" style={{ maxWidth: '820px' }}>
           <div className="decor-blob decor-blob-mint" style={{ right: '-60px', top: '-80px' }} />
           <div className="decor-blob decor-blob-lime" style={{ left: '8%', bottom: '-70px' }} />

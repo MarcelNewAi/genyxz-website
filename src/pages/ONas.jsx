@@ -4,7 +4,6 @@ import {
   IconDna,
   IconInfinity,
   IconShield,
-  IconTurtleDna,
 } from '../components/icons'
 import useTranslation from '../utils/useTranslation'
 
@@ -43,8 +42,11 @@ export default function ONas() {
 
   return (
     <>
-      <section className="section-block section-bg">
-        <div className="layout-container hero-grid" style={{ minHeight: 'calc(72vh - 72px)' }}>
+      <section className="section-block section-bg page-hero domov-hero">
+        <div aria-hidden="true" className="domov-hero-art">
+          <img alt="" className="domov-hero-turtle" decoding="async" src="/turtle-dna2.svg" />
+        </div>
+        <div className="layout-container hero-grid">
           <div className="hero-copy">
             <p className="section-label" data-reveal>
               {t('labels.kaj_je')}
@@ -58,10 +60,6 @@ export default function ONas() {
             <p className="hero-subtitle" data-reveal data-reveal-delay="200">
               {t('o-nas.hero_subtitle')}
             </p>
-          </div>
-          <div aria-hidden="true" className="hero-visual" data-reveal data-reveal-delay="200">
-            <div className="decor-blob decor-blob-mint" />
-            <IconTurtleDna className="decor-symbol" />
           </div>
         </div>
       </section>

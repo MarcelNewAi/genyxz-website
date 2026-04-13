@@ -5,7 +5,6 @@ import {
   IconHandshake,
   IconPeople,
   IconPulse,
-  IconTurtleDna,
 } from '../components/icons'
 import { AMBASSADOR_URL } from '../utils/constants'
 import useTranslation from '../utils/useTranslation'
@@ -65,7 +64,10 @@ export default function Domov() {
 
   return (
     <>
-      <section className="section-block section-bg">
+      <section className="section-block section-bg page-hero domov-hero">
+        <div aria-hidden="true" className="domov-hero-art">
+          <img alt="" className="domov-hero-turtle" decoding="async" src="/turtle-dna3.svg" />
+        </div>
         <div className="layout-container hero-grid">
           <div className="hero-copy">
             <p className="section-label" data-reveal>
@@ -88,12 +90,6 @@ export default function Domov() {
                 {t('domov.cta_secondary')}
               </Link>
             </div>
-          </div>
-
-          <div aria-hidden="true" className="hero-visual" data-reveal data-reveal-delay="180">
-            <div className="decor-blob decor-blob-mint" />
-            <div className="decor-blob decor-blob-lime" />
-            <IconTurtleDna className="decor-symbol" />
           </div>
         </div>
       </section>
