@@ -61,19 +61,19 @@ All images are hosted on Google Cloud Storage. Use the URLs listed in [`docs/INF
 
 Define everything about what we're building before writing any code.
 
-- [ ] Website type defined (single page / multi page)
-- [ ] Project name, logo, favicon, apple-touch-icon, android icon, OG image defined (GCS URLs)
-- [ ] PWA decision made (yes/no)
-- [ ] Color theme defined (primary, secondary, accent, neutrals)
-- [ ] Dark mode colors defined (if dark mode enabled)
-- [ ] Website style defined (modern, minimal, etc.)
-- [ ] Navigation structure defined (submenus yes/no, dropdown style)
-- [ ] Pages listed (if multi-page) with slugs per language
-- [ ] Sections listed (if single-page) with order
-- [ ] Languages listed with codes and flags
-- [ ] Domain confirmed
-- [ ] All SEO values defined (meta titles, descriptions, keywords, OG data per page)
-- [ ] External services confirmed (GA, Maps, Calendar, Email provider)
+- [x] Website type defined (single page / multi page)
+- [x] Project name, logo, favicon, apple-touch-icon, android icon, OG image defined (GCS URLs)
+- [x] PWA decision made (yes/no)
+- [x] Color theme defined (primary, secondary, accent, neutrals)
+- [x] Dark mode colors defined (if dark mode enabled)
+- [x] Website style defined (modern, minimal, etc.)
+- [x] Navigation structure defined (submenus yes/no, dropdown style)
+- [x] Pages listed (if multi-page) with slugs per language
+- [x] Sections listed (if single-page) with order
+- [x] Languages listed with codes and flags
+- [x] Domain confirmed
+- [x] All SEO values defined (meta titles, descriptions, keywords, OG data per page)
+- [x] External services confirmed (GA, Maps, Calendar, Email provider)
 
 ---
 
@@ -252,3 +252,4 @@ GenYXZ je skupnost ambasadorjev, ki povezuje mlade z znanjem o sodobnih pristopi
 
 ### Important Company Information
 Not provided
+

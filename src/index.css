@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3B82F6;
+  --color-secondary: #88EA4E;
+  --color-accent: #88EA4E;
+  --color-background: #F0F4F8;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #133156;
+  --color-text-secondary: #5A7394;
+  --color-border: #D8E2EE;
+  --color-error: #EF4444;
+  --color-success: #43D1AB;
+  --font-heading: "Poppins", "Inter", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-family: var(--font-heading);
+    color: var(--color-text-primary);
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1.4rem + 2vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: color-mix(in srgb, var(--color-primary) 80%, black);
+  }
+
+  a:active {
+    color: color-mix(in srgb, var(--color-primary) 65%, black);
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    padding: 0.75rem 0.875rem;
+    outline: none;
+    transition: border-color 120ms ease, box-shadow 120ms ease;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 25%, transparent);
+  }
+
+  input[aria-invalid="true"],
+  textarea[aria-invalid="true"],
+  select[aria-invalid="true"] {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-error) 22%, transparent);
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.625rem 1rem;
+    font-weight: 600;
+    line-height: 1;
+    transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+  }
+
+  .btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  .btn-primary {
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+  }
+
+  .btn-secondary {
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+  }
+
+  .btn-outline {
+    border: 1px solid var(--color-border);
+    background-color: transparent;
+    color: var(--color-text-primary);
+  }
+
+  .btn-ghost {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--color-text-secondary);
+  }
+
+  .card {
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background-color: var(--color-surface);
+    padding: 1.25rem;
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+  }
+
+  .nav-shell {
+    min-height: 44px;
+  }
+
+  .nav-hamburger {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: color-mix(in srgb, var(--color-text-primary) 35%, transparent);
+    padding: 1rem;
+  }
+
+  .modal-panel {
+    width: min(720px, 100%);
+    border-radius: 1rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 1.25rem;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-background);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 9999px;
+  border: 2px solid var(--color-background);
+}
+
+@media (max-width: 48rem) {
+  body {
+    font-size: 0.95rem;
+  }
+}
