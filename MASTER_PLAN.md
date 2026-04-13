@@ -83,14 +83,14 @@ Define everything about what we're building before writing any code.
 Scaffold the project, configure all tooling, build the HTML structure.
 
 - [x] **1.1** Vite (React) project initialized
-- [ ] **1.2** `netlify.toml` created (build command, publish dir, redirects, security headers, caching)
-- [ ] **1.3** Netlify CLI linked to site (`netlify link` or `netlify sites:create`)
+- [x] **1.2** `netlify.toml` created (build command, publish dir, redirects, security headers, caching)
+- [x] **1.3** Netlify CLI linked to site (`netlify link` or `netlify sites:create`)
 - [x] **1.4** Tailwind CSS installed and configured using Context7 docs
   - [ ] Global CSS theme: colors, fonts, scrollbar, buttons, cards, calendar, modules
   - [ ] Mobile-first responsive breakpoints (< 768px optimization)
   - [ ] Custom component styles defined
   - [ ] Dark mode variants (if dark mode enabled in INFO.md)
-- [ ] **1.5** `index.html` built with full structure
+- [x] **1.5** `index.html` built with full structure
   - [ ] All `<meta>` tags (charset, viewport, SEO, color-scheme)
   - [ ] Open Graph tags (og:type, og:site_name, og:title, og:description, og:url, og:locale, og:image)
   - [ ] Twitter Card tags
@@ -104,9 +104,9 @@ Scaffold the project, configure all tooling, build the HTML structure.
   - [ ] `<noscript>` fallback with language links
   - [ ] Language redirect script in `<body>`
   - [ ] `robots.txt` created (set to `noindex,follow` during development)
-- [ ] **1.6** Project folder structure created
-- [ ] **1.7** All page files/routes created (empty — content comes in Step 3)
-- [ ] **1.8** `netlify dev` runs successfully
+- [x] **1.6** Project folder structure created
+- [x] **1.7** All page files/routes created (empty — content comes in Step 3)
+- [x] **1.8** `netlify dev` runs successfully
 
 ---
 
@@ -252,4 +252,5 @@ GenYXZ je skupnost ambasadorjev, ki povezuje mlade z znanjem o sodobnih pristopi
 
 ### Important Company Information
 Not provided
+
 
