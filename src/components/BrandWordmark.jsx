@@ -3,7 +3,7 @@ export default function BrandWordmark({ inverse = false, className = '' }) {
     <img
       alt="GenYXZ"
       className={`brand-wordmark-image ${inverse ? 'brand-wordmark-image-inverse' : ''} ${className}`.trim()}
-      src="/GEN.svg"
+      src="/locales/sl/images/Logo.svg"
     />
   )
 }

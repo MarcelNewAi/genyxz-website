@@ -1,0 +1,24 @@
+{
+  "name": "GenYXZ",
+  "short_name": "GenYXZ",
+  "description": "Premium skupnost ambasadorjev za preventivo, moderno medicino in dolgorocno zascito v povezavi z Dr Best.",
+  "lang": "sl-SI",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F6FFFC",
+  "theme_color": "#43D1AB",
+  "icons": [
+    {
+      "src": "/locales/sl/images/Favicon.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/locales/sl/images/PWA,%20Android%20Home%20Screen.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
