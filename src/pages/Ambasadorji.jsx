@@ -21,18 +21,25 @@ export default function Ambasadorji() {
 
   return (
     <>
-      <section className="section-block section-bg page-hero ambasadorji-hero">
+      <section className="section-block section-bg page-hero ambasadorji-hero inner-page-hero">
+        <div aria-hidden="true" className="inner-page-hero-art ambasadorji-hero-art">
+          <img alt="" className="inner-page-hero-svg" decoding="async" src="/turtle-dna6-ambasadorji.svg" />
+        </div>
         <div className="layout-container ambasadorji-hero-inner">
-          <p className="ambasadorji-eyebrow" data-reveal>
-            {t('ambasadorji.hero.label')}
-          </p>
-          <h1 className="ambasadorji-hero-heading" data-reveal data-reveal-delay="90">
-            {t('ambasadorji.hero.heading')}
-          </h1>
-          <p className="ambasadorji-hero-subtitle" data-reveal data-reveal-delay="160">
-            {t('ambasadorji.hero.subtitle')}
-          </p>
-          <div aria-hidden="true" className="ambasadorji-hero-divider" data-reveal data-reveal-delay="220" />
+          <div className="ambasadorji-hero-main">
+            <p className="ambasadorji-eyebrow" data-reveal>
+              {t('ambasadorji.hero.label')}
+            </p>
+            <h1 className="ambasadorji-hero-heading" data-reveal data-reveal-delay="90">
+              {t('ambasadorji.hero.heading')}
+            </h1>
+          </div>
+          <div className="ambasadorji-hero-support">
+            <p className="ambasadorji-hero-subtitle" data-reveal data-reveal-delay="160">
+              {t('ambasadorji.hero.subtitle')}
+            </p>
+            <div aria-hidden="true" className="ambasadorji-hero-divider" data-reveal data-reveal-delay="220" />
+          </div>
         </div>
       </section>
 

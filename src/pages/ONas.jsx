@@ -26,18 +26,28 @@ export default function ONas() {
 
   return (
     <>
-      <section className="section-block section-bg page-hero onas-hero">
-        <div className="layout-container onas-hero-inner">
-          <p className="onas-eyebrow" data-reveal>
-            {t('onas.hero.label')}
-          </p>
-          <h1 className="onas-hero-heading" data-reveal data-reveal-delay="90">
-            {renderPlumWords(t('onas.hero.heading'))}
-          </h1>
-          <p className="onas-hero-subtitle" data-reveal data-reveal-delay="150">
-            {t('onas.hero.subtitle')}
-          </p>
-          <div aria-hidden="true" className="divider-line onas-hero-divider" data-reveal data-reveal-delay="210" />
+      <section className="section-block section-bg page-hero onas-hero onas-hero-v2 inner-page-hero">
+        <div className="onas-hero-container">
+          <div className="onas-hero-grid">
+            <div aria-hidden="true" className="onas-hero-figure-wrap">
+              <img alt="" className="onas-hero-figure" decoding="async" src="/turtle-dna4-o-nas.svg" />
+            </div>
+
+            <div className="onas-hero-copy">
+              <div className="onas-hero-copy-inner">
+                <p className="onas-eyebrow" data-reveal>
+                  {t('onas.hero.label')}
+                </p>
+                <h1 className="onas-hero-heading" data-reveal data-reveal-delay="90">
+                  <span className="onas-hero-heading-lead">{t('onas.hero.headingLead')}</span>{' '}
+                  <span className="onas-hero-heading-accent">{t('onas.hero.headingAccent')}</span>
+                </h1>
+                <p className="onas-hero-subtitle" data-reveal data-reveal-delay="150">
+                  {t('onas.hero.subtitle')}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

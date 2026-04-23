@@ -75,18 +75,25 @@ export default function Kontakt() {
 
   return (
     <>
-      <section className="section-block section-bg page-hero kontakt-hero">
+      <section className="section-block section-bg page-hero kontakt-hero inner-page-hero">
+        <div aria-hidden="true" className="inner-page-hero-art kontakt-hero-art">
+          <img alt="" className="inner-page-hero-svg" decoding="async" src="/turtle-dna8-kontakt.svg" />
+        </div>
         <div className="layout-container kontakt-hero-inner">
-          <p className="kontakt-eyebrow" data-reveal>
-            {t('kontakt.hero.label')}
-          </p>
-          <h1 className="kontakt-hero-heading" data-reveal data-reveal-delay="90">
-            {renderPlumWords(t('kontakt.hero.heading'))}
-          </h1>
-          <p className="kontakt-hero-subtitle" data-reveal data-reveal-delay="160">
-            {t('kontakt.hero.subtitle')}
-          </p>
-          <div aria-hidden="true" className="kontakt-hero-divider" data-reveal data-reveal-delay="220" />
+          <div className="kontakt-hero-main">
+            <p className="kontakt-eyebrow" data-reveal>
+              {t('kontakt.hero.label')}
+            </p>
+            <h1 className="kontakt-hero-heading" data-reveal data-reveal-delay="90">
+              {renderPlumWords(t('kontakt.hero.heading'))}
+            </h1>
+          </div>
+          <div className="kontakt-hero-support">
+            <p className="kontakt-hero-subtitle" data-reveal data-reveal-delay="160">
+              {t('kontakt.hero.subtitle')}
+            </p>
+            <div aria-hidden="true" className="kontakt-hero-divider" data-reveal data-reveal-delay="220" />
+          </div>
         </div>
       </section>
 

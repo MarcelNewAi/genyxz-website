@@ -89,6 +89,8 @@
   "onas": {
     "hero": {
       "label": "O nas",
+      "headingLead": "Nova generacija, ki razume",
+      "headingAccent": "prihodnost zdravja.",
       "heading": "Nova generacija, ki razume prihodnost zdravja.",
       "subtitle": "Ne gradimo projekta. Gradimo generacijo."
     },

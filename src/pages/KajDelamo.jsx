@@ -25,18 +25,25 @@ export default function KajDelamo() {
 
   return (
     <>
-      <section className="section-block section-bg page-hero kajdelamo-hero">
+      <section className="section-block section-bg page-hero kajdelamo-hero inner-page-hero">
+        <div aria-hidden="true" className="inner-page-hero-art kajdelamo-hero-art">
+          <img alt="" className="inner-page-hero-svg" decoding="async" src="/turtle-dna9-kaj-delamo.svg" />
+        </div>
         <div className="layout-container kajdelamo-hero-inner">
-          <p className="kajdelamo-eyebrow" data-reveal>
-            {t('kajdelamo.hero.label')}
-          </p>
-          <h1 className="kajdelamo-hero-heading" data-reveal data-reveal-delay="90">
-            {renderPlumWords(t('kajdelamo.hero.heading'))}
-          </h1>
-          <p className="kajdelamo-hero-subtitle" data-reveal data-reveal-delay="160">
-            {t('kajdelamo.hero.subtitle')}
-          </p>
-          <div aria-hidden="true" className="kajdelamo-hero-divider" data-reveal data-reveal-delay="220" />
+          <div className="kajdelamo-hero-main">
+            <p className="kajdelamo-eyebrow" data-reveal>
+              {t('kajdelamo.hero.label')}
+            </p>
+            <h1 className="kajdelamo-hero-heading" data-reveal data-reveal-delay="90">
+              {renderPlumWords(t('kajdelamo.hero.heading'))}
+            </h1>
+          </div>
+          <div className="kajdelamo-hero-support">
+            <p className="kajdelamo-hero-subtitle" data-reveal data-reveal-delay="160">
+              {t('kajdelamo.hero.subtitle')}
+            </p>
+            <div aria-hidden="true" className="kajdelamo-hero-divider" data-reveal data-reveal-delay="220" />
+          </div>
         </div>
       </section>
 
