@@ -18,7 +18,6 @@ export default function KajDelamo() {
 
   const scenarios = scenarioKeys.map((key) => ({
     id: key,
-    eyebrow: t(`kajdelamo.praksa.scenarios.${key}.eyebrow`),
     title: t(`kajdelamo.praksa.scenarios.${key}.title`),
     body: t(`kajdelamo.praksa.scenarios.${key}.body`),
   }))
@@ -26,32 +25,26 @@ export default function KajDelamo() {
   return (
     <>
       <section className="section-block section-bg page-hero kajdelamo-hero inner-page-hero">
-        <div aria-hidden="true" className="inner-page-hero-art kajdelamo-hero-art">
-          <img alt="" className="inner-page-hero-svg" decoding="async" src="/turtle-dna9-kaj-delamo.svg" />
-        </div>
         <div className="layout-container kajdelamo-hero-inner">
-          <div className="kajdelamo-hero-main">
-            <p className="kajdelamo-eyebrow" data-reveal>
-              {t('kajdelamo.hero.label')}
-            </p>
-            <h1 className="kajdelamo-hero-heading" data-reveal data-reveal-delay="90">
-              {renderPlumWords(t('kajdelamo.hero.heading'))}
-            </h1>
+          <div className="kajdelamo-hero-copy">
+            <div className="kajdelamo-hero-main">
+              <h1 className="kajdelamo-hero-heading" data-reveal data-reveal-delay="90">
+                {renderPlumWords(t('kajdelamo.hero.heading'))}
+              </h1>
+            </div>
+            <div className="kajdelamo-hero-support">
+              <p className="kajdelamo-hero-subtitle" data-reveal data-reveal-delay="160">
+                {t('kajdelamo.hero.subtitle')}
+              </p>
+              <div aria-hidden="true" className="kajdelamo-hero-divider" data-reveal data-reveal-delay="220" />
+            </div>
           </div>
-          <div className="kajdelamo-hero-support">
-            <p className="kajdelamo-hero-subtitle" data-reveal data-reveal-delay="160">
-              {t('kajdelamo.hero.subtitle')}
-            </p>
-            <div aria-hidden="true" className="kajdelamo-hero-divider" data-reveal data-reveal-delay="220" />
-          </div>
+          <img className="kajdelamo-hero-image" src="/turtle-dna9-kaj-delamo.svg" alt="" />
         </div>
       </section>
 
       <section className="section-block section-surface kajdelamo-delamo">
         <div className="layout-container kajdelamo-delamo-inner">
-          <p className="kajdelamo-eyebrow" data-reveal>
-            {t('kajdelamo.delamo.label')}
-          </p>
           <h2 className="kajdelamo-section-title" data-reveal data-reveal-delay="90">
             {renderPlumWords(t('kajdelamo.delamo.heading'))}
           </h2>
@@ -80,9 +73,6 @@ export default function KajDelamo() {
       <section className="section-block kajdelamo-praksa">
         <div aria-hidden="true" className="kajdelamo-praksa-glow" />
         <div className="layout-container kajdelamo-praksa-inner">
-          <p className="kajdelamo-eyebrow kajdelamo-eyebrow-light" data-reveal>
-            {t('kajdelamo.praksa.label')}
-          </p>
           <h2 className="kajdelamo-section-title kajdelamo-section-title-light" data-reveal data-reveal-delay="90">
             {t('kajdelamo.praksa.heading')}
           </h2>
@@ -90,7 +80,6 @@ export default function KajDelamo() {
           <div className="kajdelamo-praksa-list">
             {scenarios.map((item, index) => (
               <article className="kajdelamo-praksa-item" data-reveal data-reveal-delay={150 + index * 90} key={item.id}>
-                <p className="kajdelamo-praksa-item-eyebrow">{item.eyebrow}</p>
                 <h3 className="kajdelamo-praksa-item-title">{item.title}</h3>
                 <p className="kajdelamo-praksa-item-body">{item.body}</p>
               </article>
@@ -107,9 +96,6 @@ export default function KajDelamo() {
       <section className="section-block section-surface kajdelamo-prehod">
         <div className="layout-container kajdelamo-prehod-inner">
           <div aria-hidden="true" className="kajdelamo-prehod-divider" data-reveal />
-          <p className="kajdelamo-eyebrow" data-reveal data-reveal-delay="70">
-            {t('kajdelamo.prehod.label')}
-          </p>
           <p className="kajdelamo-prehod-body" data-reveal data-reveal-delay="130">
             {t('kajdelamo.prehod.body')}
           </p>

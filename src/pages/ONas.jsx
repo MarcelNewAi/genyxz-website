@@ -35,9 +35,6 @@ export default function ONas() {
 
             <div className="onas-hero-copy">
               <div className="onas-hero-copy-inner">
-                <p className="onas-eyebrow" data-reveal>
-                  {t('onas.hero.label')}
-                </p>
                 <h1 className="onas-hero-heading" data-reveal data-reveal-delay="90">
                   <span className="onas-hero-heading-lead">{t('onas.hero.headingLead')}</span>{' '}
                   <span className="onas-hero-heading-accent">{t('onas.hero.headingAccent')}</span>
@@ -53,9 +50,6 @@ export default function ONas() {
 
       <section className="section-block section-surface onas-kaj">
         <div className="layout-container">
-          <p className="onas-eyebrow" data-reveal>
-            {t('onas.kaj.label')}
-          </p>
           <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
             {renderPlumWords(t('onas.kaj.heading'))}
           </h2>
@@ -85,9 +79,6 @@ export default function ONas() {
       <section className="section-block onas-zakaj">
         <div aria-hidden="true" className="onas-zakaj-glow" />
         <div className="layout-container onas-zakaj-inner">
-          <p className="onas-eyebrow onas-eyebrow-light" data-reveal>
-            {t('onas.zakaj.label')}
-          </p>
           <h2 className="onas-section-title onas-section-title-light" data-reveal data-reveal-delay="90">
             {t('onas.zakaj.heading')}
           </h2>
@@ -115,9 +106,6 @@ export default function ONas() {
       <section className="section-block section-bg onas-simbol">
         <div className="layout-container onas-simbol-grid">
           <div className="onas-simbol-copy">
-            <p className="onas-eyebrow" data-reveal>
-              {t('onas.simbol.label')}
-            </p>
             <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
               {renderPlumWords(t('onas.simbol.heading'))}
             </h2>

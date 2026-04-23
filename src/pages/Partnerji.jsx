@@ -67,9 +67,6 @@ export default function Partnerji() {
             <div className="partnerji-hero-copy">
               <div className="partnerji-hero-copy-inner">
                 <div className="partnerji-hero-main">
-                  <p className="partnerji-eyebrow" data-reveal>
-                    {t('partnerji.hero.label')}
-                  </p>
                   <h1 className="partnerji-hero-heading" data-reveal data-reveal-delay="90">
                     {renderPlumWords(t('partnerji.hero.heading'))}
                   </h1>
@@ -88,9 +85,6 @@ export default function Partnerji() {
       <section className="section-block section-surface partnerji-avtoriteta">
         <div className="layout-container partnerji-avtoriteta-grid">
           <div className="partnerji-avtoriteta-left">
-            <p className="partnerji-eyebrow" data-reveal>
-              {t('partnerji.avtoriteta.label')}
-            </p>
             <h2 className="partnerji-section-title" data-reveal data-reveal-delay="80">
               {renderPlumWords(t('partnerji.avtoriteta.heading'))}
             </h2>
@@ -110,9 +104,6 @@ export default function Partnerji() {
 
       <section className="section-block section-bg partnerji-grid">
         <div className="layout-container partnerji-grid-inner">
-          <p className="partnerji-eyebrow" data-reveal>
-            {t('partnerji.grid.label')}
-          </p>
           <h2 className="partnerji-section-title" data-reveal data-reveal-delay="90">
             {renderPlumWords(t('partnerji.grid.heading'))}
           </h2>
@@ -128,9 +119,6 @@ export default function Partnerji() {
       <section className="section-block partnerji-stebri">
         <div aria-hidden="true" className="partnerji-stebri-glow" />
         <div className="layout-container partnerji-stebri-inner">
-          <p className="partnerji-eyebrow partnerji-eyebrow-light" data-reveal>
-            {t('partnerji.stebri.label')}
-          </p>
           <h2 className="partnerji-section-title partnerji-section-title-light" data-reveal data-reveal-delay="90">
             {t('partnerji.stebri.heading')}
           </h2>
@@ -154,9 +142,6 @@ export default function Partnerji() {
       <section className="section-block section-surface partnerji-povezava">
         <div className="layout-container partnerji-povezava-inner">
           <div aria-hidden="true" className="partnerji-povezava-divider" data-reveal />
-          <p className="partnerji-eyebrow" data-reveal data-reveal-delay="70">
-            {t('partnerji.povezava.label')}
-          </p>
           <p className="partnerji-povezava-body" data-reveal data-reveal-delay="130">
             {t('partnerji.povezava.body')}
           </p>

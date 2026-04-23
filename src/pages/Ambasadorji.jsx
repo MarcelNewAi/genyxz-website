@@ -22,33 +22,27 @@ export default function Ambasadorji() {
   return (
     <>
       <section className="section-block section-bg page-hero ambasadorji-hero inner-page-hero">
-        <div aria-hidden="true" className="inner-page-hero-art ambasadorji-hero-art">
-          <img alt="" className="inner-page-hero-svg" decoding="async" src="/turtle-dna6-ambasadorji.svg" />
-        </div>
         <div className="layout-container ambasadorji-hero-inner">
-          <div className="ambasadorji-hero-main">
-            <p className="ambasadorji-eyebrow" data-reveal>
-              {t('ambasadorji.hero.label')}
-            </p>
-            <h1 className="ambasadorji-hero-heading" data-reveal data-reveal-delay="90">
-              {t('ambasadorji.hero.heading')}
-            </h1>
+          <div className="ambasadorji-hero-copy">
+            <div className="ambasadorji-hero-main">
+              <h1 className="ambasadorji-hero-heading" data-reveal data-reveal-delay="90">
+                {t('ambasadorji.hero.heading')}
+              </h1>
+            </div>
+            <div className="ambasadorji-hero-support">
+              <p className="ambasadorji-hero-subtitle" data-reveal data-reveal-delay="160">
+                {t('ambasadorji.hero.subtitle')}
+              </p>
+              <div aria-hidden="true" className="ambasadorji-hero-divider" data-reveal data-reveal-delay="220" />
+            </div>
           </div>
-          <div className="ambasadorji-hero-support">
-            <p className="ambasadorji-hero-subtitle" data-reveal data-reveal-delay="160">
-              {t('ambasadorji.hero.subtitle')}
-            </p>
-            <div aria-hidden="true" className="ambasadorji-hero-divider" data-reveal data-reveal-delay="220" />
-          </div>
+          <img className="ambasadorji-hero-image" src="/turtle-dna6-ambasadorji.svg" alt="" />
         </div>
       </section>
 
       <section className="section-block section-surface ambasadorji-kdo">
         <div className="layout-container ambasadorji-kdo-grid">
           <div className="ambasadorji-kdo-left">
-            <p className="ambasadorji-eyebrow" data-reveal>
-              {t('ambasadorji.kdo.label')}
-            </p>
             <p className="ambasadorji-kdo-categories" data-reveal data-reveal-delay="80">
               {t('ambasadorji.kdo.categories')}
             </p>
@@ -59,9 +53,6 @@ export default function Ambasadorji() {
           </div>
 
           <div className="ambasadorji-kdo-right">
-            <p className="ambasadorji-eyebrow" data-reveal data-reveal-delay="110">
-              {t('ambasadorji.kdo.realLabel')}
-            </p>
             <p className="ambasadorji-kdo-body" data-reveal data-reveal-delay="170">
               {t('ambasadorji.kdo.body1')}
             </p>
@@ -77,9 +68,6 @@ export default function Ambasadorji() {
 
       <section className="section-block section-bg ambasadorji-pridobijo">
         <div className="layout-container ambasadorji-pridobijo-inner">
-          <p className="ambasadorji-eyebrow" data-reveal>
-            {t('ambasadorji.pridobijo.label')}
-          </p>
           <h2 className="ambasadorji-section-title" data-reveal data-reveal-delay="90">
             {t('ambasadorji.pridobijo.heading')}
           </h2>
@@ -118,9 +106,6 @@ export default function Ambasadorji() {
       <section className="section-block ambasadorji-iscemo">
         <div aria-hidden="true" className="ambasadorji-iscemo-glow" />
         <div className="layout-container ambasadorji-iscemo-inner">
-          <p className="ambasadorji-eyebrow ambasadorji-eyebrow-light" data-reveal>
-            {t('ambasadorji.iscemo.label')}
-          </p>
           <h2 className="ambasadorji-iscemo-declaration" data-reveal data-reveal-delay="90">
             {t('ambasadorji.iscemo.declaration')}
           </h2>

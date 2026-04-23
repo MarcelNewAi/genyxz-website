@@ -1361,21 +1361,35 @@
     margin-inline: auto;
   }
 
+  .onas-kaj,
+  .onas-zakaj,
+  .onas-simbol {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+  }
+
   .ambasadorji-hero {
-    padding: 28px 0 0;
+    padding: clamp(52px, 8vh, 88px) 0 clamp(42px, 7vh, 76px);
     min-height: 75vh;
     display: flex;
     align-items: center;
   }
 
   .ambasadorji-hero-inner {
-    max-width: 900px;
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: start;
+    gap: clamp(0.25rem, 1vw, 0.75rem);
+    justify-items: start;
+  }
+
+  .ambasadorji-hero-copy {
     display: grid;
     gap: 1.35rem;
-    justify-items: start;
-    padding-right: clamp(0rem, 12vw, 9rem);
-    position: relative;
-    z-index: 2;
+    max-width: 44ch;
   }
 
   .ambasadorji-hero-main {
@@ -1389,7 +1403,13 @@
     display: grid;
     gap: 0.85rem;
     align-content: start;
-    max-width: 46ch;
+    max-width: 44ch;
+  }
+
+  .ambasadorji-hero-image {
+    display: block;
+    width: clamp(360px, 38vw, 560px);
+    height: auto;
   }
 
   .ambasadorji-eyebrow {
@@ -1696,10 +1716,55 @@
   }
 
   .kontakt-hero {
-    padding: 28px 0 0;
+    padding: clamp(52px, 8vh, 88px) 0 clamp(46px, 7vh, 80px);
     min-height: 75vh;
+    overflow: visible;
+  }
+
+  .kontakt-hero-container {
+    width: min(1280px, calc(100% - 2.5rem));
+    margin-inline: auto;
+  }
+
+  .kontakt-hero-grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: calc(75vh - 28px);
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .kontakt-hero-figure-wrap {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: clamp(1rem, 3vw, 2.8rem);
+  }
+
+  .kontakt-hero-figure {
+    display: block;
+    width: clamp(741px, 74.1vw, 1086px);
+    height: auto;
+    transform: translateX(40px);
+  }
+
+  .kontakt-hero-copy {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding-block: clamp(2.25rem, 6vh, 5rem);
+  }
+
+  .kontakt-hero-copy-inner {
+    width: min(100%, 31.25rem);
+    display: grid;
+    gap: 1rem;
+    justify-items: end;
+    text-align: right;
   }
 
   .kontakt-hero-inner {
@@ -1719,11 +1784,23 @@
     max-width: 17ch;
   }
 
+  .kontakt-hero-copy .kontakt-hero-main {
+    justify-items: end;
+    max-width: 100%;
+    text-align: right;
+  }
+
   .kontakt-hero-support {
     display: grid;
     gap: 0.85rem;
     align-content: start;
     max-width: 44ch;
+  }
+
+  .kontakt-hero-copy .kontakt-hero-support {
+    justify-items: end;
+    max-width: 100%;
+    text-align: right;
   }
 
   .kontakt-eyebrow {
@@ -1747,6 +1824,10 @@
     max-width: 12.5ch;
   }
 
+  .kontakt-hero-copy .kontakt-hero-heading {
+    text-align: right;
+  }
+
   .kontakt-hero-subtitle {
     margin: 0;
     color: var(--color-text-secondary);
@@ -1755,6 +1836,10 @@
     font-style: italic;
     line-height: 1.72;
     max-width: 42ch;
+  }
+
+  .kontakt-hero-copy .kontakt-hero-subtitle {
+    text-align: right;
   }
 
   .kontakt-hero-divider {
@@ -2042,9 +2127,9 @@
   }
 
   .partnerji-hero.partnerji-hero-v2 {
-    padding: 28px 0 0;
+    padding: clamp(52px, 8vh, 88px) 0 clamp(46px, 7vh, 80px);
     min-height: 75vh;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .partnerji-hero-container {
@@ -2071,9 +2156,9 @@
 
   .partnerji-hero-figure {
     display: block;
-    width: clamp(630px, 67vw, 1010px);
+    width: clamp(741px, 74.1vw, 1086px);
     height: auto;
-    transform: translate(100px, 16.666%);
+    transform: translateX(40px);
   }
 
   .partnerji-hero-copy {
@@ -2408,39 +2493,26 @@
   }
 
   .kajdelamo-hero {
-    padding: 28px 0 0;
+    padding: clamp(52px, 8vh, 88px) 0 clamp(42px, 7vh, 76px);
     min-height: 75vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
-  }
-
-  .inner-page-hero .kajdelamo-hero-art {
-    top: auto;
-    right: -5%;
-    bottom: 0;
-    width: clamp(220px, 30vw, 420px);
-    max-height: calc(100% - 6rem);
-    display: flex;
-    align-items: flex-end;
-    transform: translateY(16.666%);
-    z-index: 0;
-  }
-
-  .kajdelamo-hero-art .inner-page-hero-svg {
-    width: 100%;
-    max-height: 100%;
-    object-fit: contain;
   }
 
   .kajdelamo-hero-inner {
-    max-width: 900px;
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: start;
+    gap: clamp(0.25rem, 1vw, 0.75rem);
+    justify-items: start;
+  }
+
+  .kajdelamo-hero-copy {
     display: grid;
     gap: 1.35rem;
-    justify-items: start;
-    padding-right: clamp(0rem, 13vw, 9rem);
-    position: relative;
-    z-index: 10;
+    max-width: 44ch;
   }
 
   .kajdelamo-hero-main {
@@ -2455,6 +2527,12 @@
     gap: 0.85rem;
     align-content: start;
     max-width: 44ch;
+  }
+
+  .kajdelamo-hero-image {
+    display: block;
+    width: clamp(360px, 38vw, 560px);
+    height: auto;
   }
 
   .kajdelamo-eyebrow {
@@ -3354,27 +3432,33 @@
     font-size: 3.8rem;
   }
 
-  .partnerji-hero.partnerji-hero-v2 {
-    padding-top: 24px;
+  .partnerji-hero.partnerji-hero-v2,
+  .kontakt-hero {
+    padding: clamp(48px, 7vh, 76px) 0 clamp(42px, 6vh, 68px);
   }
 
-  .ambasadorji-hero,
-  .kontakt-hero,
-  .kajdelamo-hero {
+  .ambasadorji-hero {
     padding: 24px 0 0;
   }
 
-  .partnerji-hero-grid {
+  .kajdelamo-hero {
+    padding: clamp(48px, 7vh, 76px) 0 clamp(38px, 6vh, 64px);
+  }
+
+  .partnerji-hero-grid,
+  .kontakt-hero-grid {
     grid-template-columns: 43% 57%;
     min-height: calc(75vh - 24px);
   }
 
-  .partnerji-hero-figure {
-    width: clamp(560px, 63vw, 865px);
-    transform: translate(80px, 16.666%);
+  .partnerji-hero-figure,
+  .kontakt-hero-figure {
+    width: clamp(676px, 75.4vw, 1027px);
+    transform: translateX(24px);
   }
 
-  .partnerji-hero-copy-inner {
+  .partnerji-hero-copy-inner,
+  .kontakt-hero-copy-inner {
     width: min(100%, 29rem);
   }
 
@@ -3419,22 +3503,27 @@
     max-width: 28ch;
   }
 
-  .partnerji-hero.partnerji-hero-v2 {
+  .partnerji-hero.partnerji-hero-v2,
+  .kontakt-hero {
     min-height: 75vh;
+    padding: clamp(46px, 7vh, 70px) 0 clamp(40px, 6vh, 64px);
   }
 
-  .partnerji-hero-grid {
+  .partnerji-hero-grid,
+  .kontakt-hero-grid {
     grid-template-columns: 40% 60%;
     min-height: calc(75vh - 24px);
   }
 
-  .partnerji-hero-figure-wrap {
+  .partnerji-hero-figure-wrap,
+  .kontakt-hero-figure-wrap {
     padding-left: clamp(0.8rem, 2vw, 1.6rem);
   }
 
-  .partnerji-hero-figure {
-    width: clamp(470px, 58vw, 700px);
-    transform: translate(48px, 16.666%);
+  .partnerji-hero-figure,
+  .kontakt-hero-figure {
+    width: clamp(585px, 72.8vw, 884px);
+    transform: translateX(12px);
   }
 
   .navbar-inner {
@@ -3540,8 +3629,14 @@
   .partnerji-hero-inner,
   .kontakt-hero-inner,
   .kajdelamo-hero-inner {
+    grid-template-columns: 1fr;
     padding-right: 0;
     gap: 1rem;
+  }
+
+  .ambasadorji-hero-image,
+  .kajdelamo-hero-image {
+    width: min(100%, 440px);
   }
 
   .onas-zakaj-row {
@@ -3566,7 +3661,7 @@
   }
 
   .kontakt-hero {
-    padding: 24px 0 0;
+    padding: clamp(46px, 7vh, 70px) 0 clamp(40px, 6vh, 64px);
     min-height: 75vh;
   }
 
@@ -3594,7 +3689,7 @@
   }
 
   .ambasadorji-hero {
-    padding: 24px 0 0;
+    padding: 48px 0 56px;
     min-height: 75vh;
   }
 
@@ -3664,7 +3759,7 @@
   }
 
   .kajdelamo-hero {
-    padding: 24px 0 0;
+    padding: 48px 0 56px;
     min-height: 75vh;
   }
 
@@ -3697,13 +3792,13 @@
   }
 
   .ambasadorji-hero,
-  .kontakt-hero,
   .kajdelamo-hero {
     min-height: auto;
     padding: 88px 0 72px;
   }
 
-  .onas-hero.onas-hero-v2 {
+  .onas-hero.onas-hero-v2,
+  .kontakt-hero {
     min-height: auto;
     padding: 88px 0 72px;
   }
@@ -3742,40 +3837,50 @@
     padding: 88px 0 72px;
   }
 
-  .partnerji-hero-container {
+  .partnerji-hero-container,
+  .kontakt-hero-container {
     width: calc(100% - 1.4rem);
   }
 
-  .partnerji-hero-grid {
+  .partnerji-hero-grid,
+  .kontakt-hero-grid {
     grid-template-columns: 1fr;
     min-height: auto;
   }
 
-  .partnerji-hero-figure-wrap {
+  .partnerji-hero-figure-wrap,
+  .kontakt-hero-figure-wrap {
     display: none;
   }
 
-  .partnerji-hero-copy {
+  .partnerji-hero-copy,
+  .kontakt-hero-copy {
     padding-block: 0;
   }
 
-  .partnerji-hero-copy-inner {
+  .partnerji-hero-copy-inner,
+  .kontakt-hero-copy-inner {
     width: min(100%, 32rem);
   }
 
   .partnerji-hero-v2 .partnerji-hero-main,
-  .partnerji-hero-v2 .partnerji-hero-support {
+  .partnerji-hero-v2 .partnerji-hero-support,
+  .kontakt-hero-copy .kontakt-hero-main,
+  .kontakt-hero-copy .kontakt-hero-support {
     justify-items: start;
     text-align: left;
   }
 
   .partnerji-hero-v2 .partnerji-hero-heading,
-  .partnerji-hero-v2 .partnerji-hero-subtitle {
+  .partnerji-hero-v2 .partnerji-hero-subtitle,
+  .kontakt-hero-copy .kontakt-hero-heading,
+  .kontakt-hero-copy .kontakt-hero-subtitle {
     text-align: left;
   }
 
   .onas-hero-copy-inner,
   .partnerji-hero-copy-inner,
+  .kontakt-hero-copy-inner,
   .ambasadorji-hero-inner,
   .kontakt-hero-inner,
   .kajdelamo-hero-inner {
@@ -3825,6 +3930,12 @@
     display: none;
   }
 
+  .onas-kaj,
+  .onas-zakaj,
+  .onas-simbol {
+    min-height: auto;
+  }
+
   .sticky-cta-wrap {
     display: block;
   }
@@ -3836,7 +3947,7 @@
 
 @media (min-width: 768px) {
   .kontakt-hero {
-    padding: 28px 0 0;
+    padding: clamp(52px, 8vh, 88px) 0 clamp(46px, 7vh, 80px);
   }
 
   .kontakt-details {
@@ -3869,7 +3980,7 @@
   }
 
   .ambasadorji-hero {
-    padding: 28px 0 0;
+    padding: clamp(52px, 8vh, 88px) 0 clamp(42px, 7vh, 76px);
   }
 
   .ambasadorji-kdo {
@@ -3919,7 +4030,7 @@
   }
 
   .kajdelamo-hero {
-    padding: 28px 0 0;
+    padding: clamp(52px, 8vh, 88px) 0 clamp(42px, 7vh, 76px);
   }
 
   .kajdelamo-delamo {
@@ -3982,10 +4093,13 @@
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
+  .kontakt-hero {
+    padding: clamp(48px, 7vh, 76px) 0 clamp(42px, 6vh, 68px);
+  }
+
   .ambasadorji-hero,
-  .kontakt-hero,
   .kajdelamo-hero {
-    padding: 24px 0 0;
+    padding: clamp(48px, 7vh, 76px) 0 clamp(38px, 6vh, 64px);
   }
 }
 

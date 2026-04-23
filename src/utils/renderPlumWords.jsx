@@ -1,5 +1,5 @@
 const DEFAULT_PLUM_WORD_PATTERN =
-  /(zdravje|zdravja|prihodnost|prihodnosti|partnerji|partnerstvo|partnerstva|skupaj|skupnost|ambasadorji|vizija)/i
+  /(zdravje|zdravja|prihodnost|prihodnosti|partnerji|partnerstvo|partnerstva|skupaj|skupnosti|skupnost|ambasadorji|vizija)/i
 
 export default function renderPlumWords(text, pattern = DEFAULT_PLUM_WORD_PATTERN) {
   if (typeof text !== 'string' || text.length === 0) {

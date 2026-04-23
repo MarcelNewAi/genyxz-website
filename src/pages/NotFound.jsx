@@ -7,9 +7,6 @@ export default function NotFound() {
   return (
     <section className="section-block section-bg">
       <div className="layout-container" style={{ textAlign: 'center' }}>
-        <p className="section-label" data-reveal>
-          {t('labels.kontakt')}
-        </p>
         <h1 className="section-title" data-reveal data-reveal-delay="90">
           {t('404.title')}
         </h1>
