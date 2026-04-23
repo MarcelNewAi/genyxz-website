@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom'
-import {
-  IconArrowRight,
-  IconCompass,
-  IconHandshake,
-  IconPeople,
-  IconPulse,
-} from '../components/icons'
-import { AMBASSADOR_URL } from '../utils/constants'
+import FinalCTA from '../components/FinalCTA'
+import VizijaBlock from '../components/VizijaBlock'
+import { AMBASSADOR_URL, PARTNER_LOGOS } from '../utils/constants'
 import useTranslation from '../utils/useTranslation'
 
 function renderGradientWord(title) {
@@ -26,40 +21,11 @@ function renderGradientWord(title) {
 export default function Domov() {
   const { t } = useTranslation()
 
-  const overviewCards = [
-    {
-      to: '/o-nas',
-      title: t('domov.card_o_nas_title'),
-      text: t('domov.card_o_nas_text'),
-      Icon: IconCompass,
-    },
-    {
-      to: '/kaj-delamo',
-      title: t('domov.card_kaj_delamo_title'),
-      text: t('domov.card_kaj_delamo_text'),
-      Icon: IconPulse,
-    },
-    {
-      to: '/partnerji',
-      title: t('domov.card_partnerji_title'),
-      text: t('domov.card_partnerji_text'),
-      Icon: IconHandshake,
-    },
-    {
-      to: '/ambasadorji',
-      title: t('domov.card_ambasadorji_title'),
-      text: t('domov.card_ambasadorji_text'),
-      Icon: IconPeople,
-    },
-  ]
-
-  const partners = [
-    t('partnerji.partner1_name'),
-    t('partnerji.partner2_name'),
-    t('partnerji.partner3_name'),
-    t('partnerji.partner4_name'),
-    t('partnerji.partner5_name'),
-    t('partnerji.partner6_name'),
+  const teaserCards = [
+    { to: '/o-nas', key: 'onas', variant: 'feature' },
+    { to: '/kaj-delamo', key: 'kajdelamo', variant: 'top' },
+    { to: '/ambasadorji', key: 'ambasadorji', variant: 'middle' },
+    { to: '/partnerji', key: 'partnerji', variant: 'wide' },
   ]
 
   return (
@@ -82,6 +48,9 @@ export default function Domov() {
             <p className="hero-subtitle" data-reveal data-reveal-delay="220">
               {t('domov.hero_subtitle')}
             </p>
+            <p className="hero-statement" data-reveal data-reveal-delay="250">
+              {t('domov.hero.statement')}
+            </p>
             <div className="hero-actions" data-reveal data-reveal-delay="280">
               <a className="btn btn-primary" href={AMBASSADOR_URL}>
                 {t('domov.cta_primary')}
@@ -94,44 +63,49 @@ export default function Domov() {
         </div>
       </section>
 
-      <section className="section-block section-surface">
-        <div className="layout-container editorial-block">
-          <p className="section-label" data-reveal>
-            {t('labels.kaj_je')}
+      <section className="section-block section-surface domov-bridge">
+        <div className="layout-container domov-bridge-inner">
+          <p className="domov-bridge-label" data-reveal>
+            {t('domov.bridge.label')}
           </p>
-          <p className="section-context" data-reveal data-reveal-delay="80">
-            {t('domov.intro_label')}
+          <p className="domov-bridge-body" data-reveal data-reveal-delay="90">
+            {t('domov.bridge.body')}
           </p>
-          <h2 className="section-title" data-reveal data-reveal-delay="120">
-            {t('domov.intro_title')}
-          </h2>
-          <p className="section-text" data-reveal data-reveal-delay="180">
-            {t('domov.intro_text')}
-          </p>
+          <div aria-hidden="true" className="divider-line domov-bridge-divider" data-reveal data-reveal-delay="130" />
         </div>
       </section>
 
-      <section className="section-block section-bg">
+      <section className="section-block section-bg domov-teasers">
         <div className="layout-container">
-          <p className="section-label" data-reveal>
-            {t('labels.kaj_delamo')}
+          <p className="domov-teasers-label" data-reveal>
+            {t('domov.teasers.label')}
           </p>
-          <h2 className="section-title" data-reveal data-reveal-delay="90">
-            {t('domov.overview_title')}
+          <h2 className="domov-teasers-heading" data-reveal data-reveal-delay="90">
+            {t('domov.teasers.heading')}
           </h2>
-          <p className="section-text" data-reveal data-reveal-delay="150">
-            {t('domov.overview_subtitle')}
-          </p>
 
-          <div className="feature-grid" style={{ marginTop: '1.7rem' }}>
-            {overviewCards.map((card, index) => (
-              <Link className="soft-card" data-reveal data-reveal-delay={120 + index * 70} key={card.to} to={card.to}>
-                <card.Icon className="soft-card-icon" />
-                <h3 className="soft-card-title">{card.title}</h3>
-                <p className="soft-card-copy">{card.text}</p>
-                <span className="soft-card-link">
-                  {t('domov.cta_secondary')}
-                  <IconArrowRight className="icon-sm" />
+          <div className="domov-teaser-grid">
+            {teaserCards.map((card, index) => (
+              <Link
+                className={`domov-teaser-card domov-teaser-card-${card.variant}`}
+                data-reveal
+                data-reveal-delay={120 + index * 60}
+                key={card.to}
+                to={card.to}
+              >
+                <p className="domov-teaser-eyebrow">{t(`domov.teasers.cards.${card.key}.eyebrow`)}</p>
+                <h3 className="domov-teaser-title">{t(`domov.teasers.cards.${card.key}.heading`)}</h3>
+                <p className="domov-teaser-line">{t(`domov.teasers.cards.${card.key}.line`)}</p>
+                <span aria-hidden="true" className="domov-teaser-arrow">
+                  <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6 18L18 6M9 6H18V15"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.9"
+                    />
+                  </svg>
                 </span>
               </Link>
             ))}
@@ -139,51 +113,29 @@ export default function Domov() {
         </div>
       </section>
 
-      <section className="section-block section-surface">
-        <div className="layout-container">
-          <p className="section-label" data-reveal>
-            {t('labels.partnerji')}
-          </p>
-          <p className="section-context" data-reveal data-reveal-delay="80">
+      <section className="section-block section-surface domov-trust-strip">
+        <div className="layout-container domov-trust-inner">
+          <p className="domov-trust-label" data-reveal>
             {t('domov.partners_label')}
           </p>
-          <h2 className="section-title" data-reveal data-reveal-delay="130">
-            {t('domov.partners_title')}
-          </h2>
-          <div className="logo-grid">
-            {partners.map((partner, index) => (
-              <div className="logo-box" data-reveal data-reveal-delay={140 + index * 45} key={partner}>
-                {partner}
+          <div className="logo-grid domov-trust-logos">
+            {PARTNER_LOGOS.map((partner, index) => (
+              <div className="logo-box logo-box-brand" data-reveal data-reveal-delay={140 + index * 45} key={partner.id}>
+                <img
+                  alt={t(partner.nameKey)}
+                  className={`partner-logo ${partner.sizeClass}`}
+                  decoding="async"
+                  loading="lazy"
+                  src={partner.src}
+                />
               </div>
             ))}
           </div>
-
-          <Link className="soft-card-link" data-reveal data-reveal-delay="220" to="/partnerji">
-            {t('domov.cta_secondary')}
-            <IconArrowRight className="icon-sm" />
-          </Link>
         </div>
       </section>
 
-      <section className="section-block section-navy">
-        <div className="layout-container" style={{ textAlign: 'center', position: 'relative' }}>
-          <div className="decor-blob decor-blob-mint" style={{ right: '12%', top: '-70px' }} />
-          <div className="decor-blob decor-blob-lime" style={{ left: '18%', bottom: '-90px' }} />
-
-          <p className="section-label section-label-light" data-reveal>
-            {t('labels.ambasadorji')}
-          </p>
-          <h2 className="section-title section-title-light" data-reveal data-reveal-delay="90">
-            {t('domov.join_title')}
-          </h2>
-          <p className="section-text section-text-light" data-reveal data-reveal-delay="150" style={{ marginInline: 'auto' }}>
-            {t('domov.join_text')}
-          </p>
-          <a className="btn btn-primary" data-reveal data-reveal-delay="220" href={AMBASSADOR_URL} style={{ marginTop: '1.8rem' }}>
-            {t('domov.join_cta')}
-          </a>
-        </div>
-      </section>
+      <VizijaBlock />
+      <FinalCTA />
     </>
   )
 }

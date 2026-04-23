@@ -1,181 +1,127 @@
-import {
-  IconAnchor,
-  IconBookEye,
-  IconDna,
-  IconInfinity,
-  IconShield,
-} from '../components/icons'
+import FinalCTA from '../components/FinalCTA'
+import VizijaBlock from '../components/VizijaBlock'
 import useTranslation from '../utils/useTranslation'
 
 export default function ONas() {
   const { t } = useTranslation()
 
-  const visionPoints = [
-    t('o-nas.vizija_point1'),
-    t('o-nas.vizija_point2'),
-    t('o-nas.vizija_point3'),
-    t('o-nas.vizija_point4'),
-  ]
-
-  const symbolItems = [
+  const razlogi = [
     {
-      title: t('o-nas.simbol_point1_title'),
-      text: t('o-nas.simbol_point1_text'),
-      Icon: IconInfinity,
+      number: t('onas.zakaj.blocks.one.number'),
+      heading: t('onas.zakaj.blocks.one.heading'),
+      body: t('onas.zakaj.blocks.one.body'),
     },
     {
-      title: t('o-nas.simbol_point2_title'),
-      text: t('o-nas.simbol_point2_text'),
-      Icon: IconShield,
+      number: t('onas.zakaj.blocks.two.number'),
+      heading: t('onas.zakaj.blocks.two.heading'),
+      body: t('onas.zakaj.blocks.two.body'),
     },
     {
-      title: t('o-nas.simbol_point3_title'),
-      text: t('o-nas.simbol_point3_text'),
-      Icon: IconAnchor,
-    },
-    {
-      title: t('o-nas.simbol_point4_title'),
-      text: t('o-nas.simbol_point4_text'),
-      Icon: IconBookEye,
+      number: t('onas.zakaj.blocks.three.number'),
+      heading: t('onas.zakaj.blocks.three.heading'),
+      body: t('onas.zakaj.blocks.three.body'),
     },
   ]
 
   return (
     <>
-      <section className="section-block section-bg page-hero domov-hero">
-        <div aria-hidden="true" className="domov-hero-art">
-          <img alt="" className="domov-hero-turtle" decoding="async" src="/turtle-dna2.svg" />
+      <section className="section-block section-bg page-hero onas-hero">
+        <div className="layout-container onas-hero-inner">
+          <p className="onas-eyebrow" data-reveal>
+            {t('onas.hero.label')}
+          </p>
+          <h1 className="onas-hero-heading" data-reveal data-reveal-delay="90">
+            {t('onas.hero.heading')}
+          </h1>
+          <p className="onas-hero-subtitle" data-reveal data-reveal-delay="150">
+            {t('onas.hero.subtitle')}
+          </p>
+          <div aria-hidden="true" className="divider-line onas-hero-divider" data-reveal data-reveal-delay="210" />
         </div>
-        <div className="layout-container hero-grid">
-          <div className="hero-copy">
-            <p className="section-label" data-reveal>
-              {t('labels.kaj_je')}
-            </p>
-            <p className="section-context" data-reveal data-reveal-delay="80">
-              {t('o-nas.hero_label')}
-            </p>
-            <h1 className="section-title" data-reveal data-reveal-delay="140">
-              {t('o-nas.hero_title')}
-            </h1>
-            <p className="hero-subtitle" data-reveal data-reveal-delay="200">
-              {t('o-nas.hero_subtitle')}
-            </p>
+      </section>
+
+      <section className="section-block section-surface onas-kaj">
+        <div className="layout-container">
+          <p className="onas-eyebrow" data-reveal>
+            {t('onas.kaj.label')}
+          </p>
+          <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
+            {t('onas.kaj.heading')}
+          </h2>
+          <div className="onas-kaj-grid">
+            <div className="onas-kaj-main">
+              <p className="onas-body-lg" data-reveal data-reveal-delay="140">
+                {t('onas.kaj.body1')}
+              </p>
+              <p className="onas-kaj-statement" data-reveal data-reveal-delay="200">
+                {t('onas.kaj.statement')}
+              </p>
+              <p className="onas-body" data-reveal data-reveal-delay="260">
+                {t('onas.kaj.body2')}
+              </p>
+            </div>
+
+            <aside className="onas-primer-note" data-reveal data-reveal-delay="180">
+              <p className="onas-primer-label">{t('onas.kaj.primer.label')}</p>
+              <p className="onas-primer-body">{t('onas.kaj.primer.body1')}</p>
+              <div aria-hidden="true" className="onas-primer-divider" />
+              <p className="onas-body">{t('onas.kaj.primer.body2')}</p>
+            </aside>
           </div>
         </div>
       </section>
 
-      <section className="section-block section-surface">
-        <div className="layout-container editorial-block">
-          <p className="section-label" data-reveal>
-            {t('labels.kaj_je')}
+      <section className="section-block onas-zakaj">
+        <div aria-hidden="true" className="onas-zakaj-glow" />
+        <div className="layout-container onas-zakaj-inner">
+          <p className="onas-eyebrow onas-eyebrow-light" data-reveal>
+            {t('onas.zakaj.label')}
           </p>
-          <p className="section-context" data-reveal data-reveal-delay="70">
-            {t('o-nas.kaj_je_label')}
-          </p>
-          <h2 className="section-title" data-reveal data-reveal-delay="110">
-            {t('o-nas.kaj_je_title')}
+          <h2 className="onas-section-title onas-section-title-light" data-reveal data-reveal-delay="90">
+            {t('onas.zakaj.heading')}
           </h2>
-          <p className="section-text" data-reveal data-reveal-delay="170">
-            {t('o-nas.kaj_je_p1')}
-          </p>
-          <div className="divider-line" data-reveal data-reveal-delay="200" />
-          <p className="section-text" data-reveal data-reveal-delay="230">
-            {t('o-nas.kaj_je_p2')}
-          </p>
-          <div className="divider-line" data-reveal data-reveal-delay="260" />
-          <p className="section-text" data-reveal data-reveal-delay="290">
-            {t('o-nas.kaj_je_p3')}
-          </p>
-        </div>
-      </section>
 
-      <section className="section-block section-bg">
-        <div className="layout-container">
-          <p className="section-label" data-reveal>
-            {t('labels.vizija')}
-          </p>
-          <p className="section-context" data-reveal data-reveal-delay="70">
-            {t('o-nas.vizija_label')}
-          </p>
-          <h2 className="section-title" data-reveal data-reveal-delay="120">
-            {t('o-nas.vizija_title')}
-          </h2>
-          <p className="section-text" data-reveal data-reveal-delay="170">
-            {t('o-nas.vizija_intro')}
-          </p>
-
-          <div className="number-list">
-            {visionPoints.map((point, index) => (
-              <div className="number-item" data-reveal data-reveal-delay={180 + index * 55} key={point}>
-                <span className="number-item-index">{index + 1}.</span>
-                <p className="section-text" style={{ marginTop: 0 }}>
-                  {point}
+          <div className="onas-zakaj-rows">
+            {razlogi.map((block, index) => (
+              <div className="onas-zakaj-row" data-reveal data-reveal-delay={150 + index * 90} key={block.number}>
+                <p aria-hidden="true" className="onas-zakaj-number">
+                  {block.number}
                 </p>
+                <div className="onas-zakaj-copy">
+                  <h3 className="onas-zakaj-heading">{block.heading}</h3>
+                  <p className="onas-zakaj-body">{block.body}</p>
+                </div>
               </div>
             ))}
           </div>
-
-          <p className="pull-quote" data-reveal data-reveal-delay="380">
-            {t('o-nas.vizija_closing')}
-          </p>
-        </div>
-      </section>
-
-      <section className="section-block section-navy">
-        <div className="layout-container">
-          <p className="section-label section-label-light" data-reveal>
-            {t('labels.simbol')}
-          </p>
-          <p className="section-context section-context-light" data-reveal data-reveal-delay="80">
-            {t('o-nas.simbol_label')}
-          </p>
-          <h2 className="section-title section-title-light" data-reveal data-reveal-delay="140">
-            {t('o-nas.simbol_title')}
-          </h2>
-          <p className="section-text section-text-light" data-reveal data-reveal-delay="190">
-            {t('o-nas.simbol_intro')}
-          </p>
-
-          <div className="feature-grid" style={{ marginTop: '1.6rem' }}>
-            {symbolItems.map((item, index) => (
-              <article className="dark-feature" data-reveal data-reveal-delay={180 + index * 60} key={item.title}>
-                <item.Icon className="icon-xl" style={{ color: '#43d1ab' }} />
-                <h3 className="dark-feature-title">{item.title}</h3>
-                <p className="dark-feature-copy">{item.text}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="dna-feature" data-reveal data-reveal-delay="360">
-            <IconDna className="dna-feature-icon" />
-            <div>
-              <h3 className="dark-feature-title" style={{ marginTop: 0 }}>
-                {t('o-nas.simbol_dna_title')}
-              </h3>
-              <p className="dark-feature-copy" style={{ marginTop: '0.5rem' }}>
-                {t('o-nas.simbol_dna_text')}
-              </p>
-            </div>
+          <div className="onas-zakaj-closer-wrap" data-reveal data-reveal-delay="450">
+            <div aria-hidden="true" className="onas-zakaj-closer-line" />
+            <p className="onas-zakaj-closer">{t('onas.zakaj.closer')}</p>
           </div>
         </div>
       </section>
 
-      <section className="section-block section-surface">
-        <div className="layout-container editorial-block">
-          <p className="section-label" data-reveal>
-            {t('labels.intro')}
-          </p>
-          <p className="section-context" data-reveal data-reveal-delay="80">
-            {t('o-nas.kdo_smo_label')}
-          </p>
-          <h2 className="section-title" data-reveal data-reveal-delay="120">
-            {t('o-nas.kdo_smo_title')}
-          </h2>
-          <p className="section-text" data-reveal data-reveal-delay="180">
-            {t('o-nas.kdo_smo_text')}
-          </p>
+      <section className="section-block section-bg onas-simbol">
+        <div className="layout-container onas-simbol-grid">
+          <div className="onas-simbol-copy">
+            <p className="onas-eyebrow" data-reveal>
+              {t('onas.simbol.label')}
+            </p>
+            <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
+              {t('onas.simbol.heading')}
+            </h2>
+            <p className="onas-body" data-reveal data-reveal-delay="150">
+              {t('onas.simbol.body')}
+            </p>
+          </div>
+          <div className="onas-simbol-art" data-reveal data-reveal-delay="170">
+            <img alt="" className="onas-simbol-image" decoding="async" src="/turtle-dna3.svg" />
+          </div>
         </div>
       </section>
+
+      <VizijaBlock />
+      <FinalCTA />
     </>
   )
 }

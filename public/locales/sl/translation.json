@@ -13,6 +13,11 @@
     "kontakt": "Kontakt",
     "cta": "Postani ambasador"
   },
+  "sticky": {
+    "label": "Postani ambasador — 2 minuti",
+    "cta": "Prijavi se",
+    "aria_label": "Postani ambasador — prijava traja 2 minuti"
+  },
   "labels": {
     "intro": "01 — Dobrodošli",
     "kaj_je": "02 — Kaj je GenYXZ",
@@ -27,8 +32,41 @@
     "hero_label": "GenYXZ",
     "hero_title": "Nova generacija, ki razume prihodnost zdravja.",
     "hero_subtitle": "Povezujemo znanje, ljudi in sodobne rešitve, ki spreminjajo način, kako skrbimo za zdravje.",
+    "hero": {
+      "statement": "Ne gradimo projekta. Gradimo generacijo."
+    },
     "cta_primary": "Postani ambasador",
     "cta_secondary": "Preberi več",
+    "bridge": {
+      "label": "GenYXZ",
+      "body": "Skupnost ljudi, ki razumejo, da prihodnost zdravja ne temelji samo na zdravljenju bolezni – ampak na razumevanju telesa, preventive in pravih odločitev ob pravem času."
+    },
+    "teasers": {
+      "label": "Raziskuj",
+      "heading": "Kaj te čaka",
+      "cards": {
+        "onas": {
+          "eyebrow": "01 — Identiteta",
+          "heading": "Kaj je GenYXZ",
+          "line": "Zakaj obstajamo in kaj nas žene."
+        },
+        "kajdelamo": {
+          "eyebrow": "02 — Delovanje",
+          "heading": "Kaj delamo",
+          "line": "Aktivnosti, dogodki, prenos znanja."
+        },
+        "ambasadorji": {
+          "eyebrow": "03 — Ljudje",
+          "heading": "Ambasadorji",
+          "line": "Kdo so in kaj pridobijo."
+        },
+        "partnerji": {
+          "eyebrow": "04 — Okolje",
+          "heading": "Partnerji",
+          "line": "Sodobna medicina, preventiva, zaščita."
+        }
+      }
+    },
     "intro_label": "Dobrodošli",
     "intro_title": "Prihodnost zdravja se začne z razumevanjem.",
     "intro_text": "GenYXZ je skupnost ambasadorjev, ki pomaga razumeti, kako se zdravje razvija v svetu, kjer tehnologija napreduje hitreje kot naše navade.",
@@ -47,6 +85,52 @@
     "join_title": "Pripravljen postati del spremembe?",
     "join_text": "Pridruži se prvi generaciji GenYXZ ambasadorjev in soustvarjaj prihodnost zdravja.",
     "join_cta": "Postani ambasador"
+  },
+  "onas": {
+    "hero": {
+      "label": "O nas",
+      "heading": "Nova generacija, ki razume prihodnost zdravja.",
+      "subtitle": "Ne gradimo projekta. Gradimo generacijo."
+    },
+    "kaj": {
+      "label": "Kaj je GenYXZ",
+      "heading": "Povezujemo ljudi z znanjem in rešitvami, ki že obstajajo.",
+      "body1": "GenYXZ je skupnost ljudi, ki razumejo, da prihodnost zdravja ne temelji samo na zdravljenju bolezni – ampak na razumevanju telesa, preventive in pravih odločitev ob pravem času.",
+      "statement": "Naš cilj je preprost: povezati ljudi z znanjem in rešitvami, ki že obstajajo – a jih večina še ne pozna.",
+      "body2": "Delujemo na presečišču sodobne medicine, preventive in dolgoročne zaščite.",
+      "primer": {
+        "label": "Primer iz prakse",
+        "body1": "Ambasador v svojem okolju na preprost in razumljiv način razloži sodobne pristope k boljšemu počutju in zdravju.",
+        "body2": "Ljudem pomaga razumeti, kaj jim je dejansko na voljo, in jih poveže z relevantnimi informacijami. Predstavi jim tudi napredne rešitve, ki jih razvijajo naši globalni partnerji na področju preventive in sodobnih zdravstvenih storitev."
+      }
+    },
+    "zakaj": {
+      "label": "Zakaj to obstaja",
+      "heading": "Živimo v času velikih sprememb.",
+      "blocks": {
+        "one": {
+          "number": "01",
+          "heading": "Tehnologija napreduje hitreje kot navade",
+          "body": "Način, kako skrbimo za svoje dobro počutje in zdravje, ne dohaja hitrosti razvoja znanosti in tehnologije."
+        },
+        "two": {
+          "number": "02",
+          "heading": "Rešitve že obstajajo",
+          "body": "Nove preventivne in zdravstvene rešitve postajajo dostopne. Problem ni njihova odsotnost — problem je, da jih večina ljudi še ne pozna."
+        },
+        "three": {
+          "number": "03",
+          "heading": "Nekdo jih mora približati ljudem",
+          "body": "Med znanjem in vsakdanjim življenjem je vrzel. Gradimo generacijo, ki bo znala to vrzel zapolniti."
+        }
+      },
+      "closer": "Zato gradimo novo generacijo."
+    },
+    "simbol": {
+      "label": "Naš simbol",
+      "heading": "Želva z vijačnico DNK",
+      "body": "Želva simbolizira dolgoživost, zaščito, stabilnost in modrost. Dvojna vijačnica DNK predstavlja znanje in prihodnost medicine — povezavo med naravo in znanostjo, med tradicijo in inovacijo."
+    }
   },
   "o-nas": {
     "hero_label": "O nas",
@@ -110,7 +194,118 @@
     "praksa_point4": "prodajnimi svetovalci",
     "praksa_closing": "Znanje se vedno povezuje s prakso."
   },
+  "kajdelamo": {
+    "hero": {
+      "label": "Kaj delamo",
+      "heading": "Širimo znanje. Povezujemo ljudi. Gradimo skupnosti.",
+      "subtitle": "Ne gre za klasično promocijo. Gre za razumevanje in prenos znanja."
+    },
+    "delamo": {
+      "label": "Naše delovanje",
+      "heading": "Štirje stebri našega dela.",
+      "blocks": {
+        "one": {
+          "number": "01",
+          "heading": "Širimo znanje o sodobnih pristopih k zdravju",
+          "body": "Znanje, ki bi moralo biti vsakdanje, a pogosto ostaja skrito za strokovnim jezikom. Ambasadorji ga prevajajo v razumljive pogovore."
+        },
+        "two": {
+          "number": "02",
+          "heading": "Organiziramo pogovore in dogodke",
+          "body": "Manjši dogodki, predstavitve, neformalna srečanja. Kjer se ljudje lahko vprašajo, ne da bi se počutili neumno."
+        },
+        "three": {
+          "number": "03",
+          "heading": "Povezujemo ljudi z relevantnimi informacijami",
+          "body": "Od preventivnih rešitev do sodobnih zdravstvenih storitev. Ambasador usmerja, ne prodaja."
+        },
+        "four": {
+          "number": "04",
+          "heading": "Gradimo skupnosti v lokalnem okolju",
+          "body": "Skupnost ni abstrakcija. Je ljudje, ki se poznajo, zaupajo drug drugemu in skupaj rastejo."
+        }
+      },
+      "closer": "Ne gre za klasično promocijo. Gre za razumevanje in prenos znanja."
+    },
+    "praksa": {
+      "label": "Kako izgleda v praksi",
+      "heading": "Ambasadorjevo delo ni abstraktno.",
+      "scenarios": {
+        "one": {
+          "eyebrow": "Scenarij 01",
+          "title": "Manjši dogodek ali predstavitev",
+          "body": "Ambasador organizira neformalno srečanje v svojem okolju — lahko je to predavanje, pogovorni večer ali interni dogodek. Tema: kako sodobne rešitve vplivajo na zdravje in dobro počutje. Format: sproščen, dostopen, brez pritiska."
+        },
+        "two": {
+          "eyebrow": "Scenarij 02",
+          "title": "Pogovor z nekom, ki ga tema zanima",
+          "body": "Nekdo iz ambasadorjeve mreže postavi vprašanje o preventivi ali sodobnih zdravstvenih pristopih. Ambasador se pogovori, razloži, usmeri. Ne prodaja — povezuje z relevantnimi informacijami in partnerji."
+        },
+        "three": {
+          "eyebrow": "Scenarij 03",
+          "title": "Zgodba stranke, ki želi deliti izkušnjo",
+          "body": "Nekdo, ki je z ambasadorjevo pomočjo našel rešitev, želi svojo izkušnjo deliti naprej. Ambasador mu pomaga zgodbo oblikovati in jo ponese v širši krog — tako znanje potuje."
+        }
+      },
+      "closer": "Znanje vedno povezujemo s prakso."
+    },
+    "prehod": {
+      "label": "Okolje",
+      "body": "Delujemo v okolju, kjer se stikajo preventiva, sodobna medicina in dolgoročna zaščita. Sodelujemo z organizacijami, ki oblikujejo prihodnost zdravja — in to znanje približujemo ljudem.",
+      "statement": "Naši partnerji so v svetovnem vrhu preventivnih in zdravstvenih rešitev.",
+      "link": "Spoznaj okolje partnerjev →"
+    }
+  },
   "partnerji": {
+    "hero": {
+      "label": "Partnerji",
+      "heading": "Okolje, v katerem delujemo.",
+      "subtitle": "Preventiva, sodobna medicina, dolgoročna zaščita — vse na enem mestu."
+    },
+    "avtoriteta": {
+      "label": "Avtoriteta",
+      "heading": "Znanje, ki ga prenašamo, izvira od ljudi, ki ga ustvarjajo.",
+      "statement": "Sodelujemo z organizacijami, ki oblikujejo prihodnost zdravja.",
+      "body": "Naši partnerji so v svetovnem vrhu preventivnih in zdravstvenih rešitev. Ne gre za abstraktne povezave — njihovo znanje in storitve prek ambasadorjev resnično prehajajo do ljudi."
+    },
+    "grid": {
+      "label": "Naši partnerji",
+      "heading": "Šest organizacij, ki oblikujejo okolje.",
+      "partners": {
+        "drbest": "Dr Best",
+        "abihealth": "Abi Health",
+        "further": "Further",
+        "teladoc": "Teladoc",
+        "geneplanet": "GenePlanet",
+        "axeria": "Axeria"
+      }
+    },
+    "stebri": {
+      "label": "Trije stebri",
+      "heading": "Tri področja, ki skupaj gradijo celovito podobo zdravja.",
+      "blocks": {
+        "one": {
+          "number": "01",
+          "heading": "Preventiva",
+          "body": "Prepoznavanje in zmanjševanje tveganj, preden postanejo težave. Genetski in zdravstveni presejalni testi, lifestyle ocene, sodobne metode spremljanja telesa."
+        },
+        "two": {
+          "number": "02",
+          "heading": "Sodobna medicina",
+          "body": "Dostop do globalne mreže strokovnjakov in digitalnih zdravstvenih storitev. Telemedicina, drugo mnenje, sodobne diagnostične metode."
+        },
+        "three": {
+          "number": "03",
+          "heading": "Dolgoročna zaščita",
+          "body": "Finančni in sistemski okvirji, ki omogočajo, da sodobne rešitve ostanejo dostopne tudi takrat, ko so najbolj potrebne."
+        }
+      }
+    },
+    "povezava": {
+      "label": "Povezava",
+      "body": "Partnerji ustvarjajo znanje in rešitve. Ambasadorji pa poskrbijo, da to znanje resnično pride do ljudi — v razumljivi obliki, v pravem trenutku, v pravem kontekstu.",
+      "statement": "Brez mostu med znanjem in vsakdanom ostaja znanje le na policah."
+    },
     "hero_label": "Partnerji",
     "hero_title": "Okolje, v katerem delujemo.",
     "hero_subtitle": "Povezujemo se z organizacijami, ki razvijajo prihodnost zdravja.",
@@ -133,6 +328,77 @@
     "eco3_text": "Vzdržna varnost in podpora."
   },
   "ambasadorji": {
+    "hero": {
+      "label": "Ambasadorji",
+      "heading": "Ljudje, ki želijo več.",
+      "subtitle": "Gradimo prvo generacijo — tiste, ki bodo znali razložiti prihodnost zdravja."
+    },
+    "kdo": {
+      "label": "Kdo so",
+      "categories": "Študenti. Mladi profesionalci. Družine.",
+      "categoriesLine": "Tri skupine, en skupen imenovalec.",
+      "realLabel": "V resnici pa",
+      "body1": "Naši ambasadorji so ljudje, ki želijo razumeti več. Radi delajo z ljudmi, so radovedni in želijo aktivno vplivati na okolje, v katerem živijo.",
+      "statement": "So posamezniki in celo cele družine, ki to delo razumejo kot svoje poslanstvo.",
+      "body2": "Ljudje, ki želijo več kot samo opraviti izpite. Več kot samo priti skozi delovni dan. Ki vidijo, da je v zdravju, znanju in skupnosti prostor, kjer lahko resnično nekaj spremenijo."
+    },
+    "pridobijo": {
+      "label": "Kaj pridobijo",
+      "heading": "Ne samo izkušnje. Konkretne veščine.",
+      "intro": "Veščine, ki ostanejo — ne glede na to, kam te pot pelje naprej.",
+      "skills": {
+        "one": {
+          "number": "01",
+          "heading": "Kako pristopiti do nekoga, ki ga ne poznaš",
+          "body": "Najbolj nedolžna sposobnost, ki odpre največ vrat. Naučiš se začeti pogovor brez skripte."
+        },
+        "two": {
+          "number": "02",
+          "heading": "Kako kompleksno idejo razložiti na enostaven način",
+          "body": "Največja razlika med strokovnjakom in prevajalcem znanja. Eden ve — drugi zna povedati tako, da je razumljivo."
+        },
+        "three": {
+          "number": "03",
+          "heading": "Kako organizirati dogodek",
+          "body": "Od prve ideje do polne sobe. Logistika, komunikacija, sledenje. Veščine, ki se prenašajo v katero koli področje."
+        },
+        "four": {
+          "number": "04",
+          "heading": "Kako zgraditi svojo mrežo kontaktov",
+          "body": "Mreža ni seznam ljudi. Je niz zaupljivih odnosov, ki se gradijo počasi in z namenom."
+        },
+        "five": {
+          "number": "05",
+          "heading": "Kako delovati samozavestno v realnih situacijah",
+          "body": "Samozavest ni nekaj, kar imaš ali nimaš. Je nekaj, kar prideš do — skozi ponavljanje, odziv, refleksijo."
+        },
+        "six": {
+          "number": "06",
+          "heading": "Kako razmišljati podjetniško",
+          "body": "Videti priložnosti tam, kjer jih drugi ne. Razmišljati v sistemih, ne samo v nalogah."
+        }
+      },
+      "plus": {
+        "label": "In še",
+        "items": [
+          "Fleksibilno delo",
+          "Mentorska podpora",
+          "Dostop do znanja in trendov prihodnosti",
+          "Sodelovanje z globalnimi partnerji v svetovnem vrhu preventive in sodobne medicine"
+        ]
+      }
+    },
+    "iscemo": {
+      "label": "Koga iščemo",
+      "declaration": "Ne iščemo popolnih.",
+      "body": "Iščemo ljudi, ki imajo energijo, radi delajo z ljudmi, so radovedni in želijo več kot samo študentsko ali priložnostno delo. Predhodne izkušnje niso potrebne.",
+      "traits": [
+        "Energija",
+        "Komunikativnost",
+        "Radovednost",
+        "Ambicija"
+      ]
+    },
     "hero_label": "Ambasadorji",
     "hero_title": "Postani del prve generacije.",
     "hero_subtitle": "Prva generacija GenYXZ ambasadorjev gradi temelje za vse, kar pride.",
@@ -157,6 +423,64 @@
     "pridruzi_cta": "Postani ambasador"
   },
   "kontakt": {
+    "hero": {
+      "label": "Kontakt",
+      "heading": "Ostanimo v stiku.",
+      "subtitle": "Za vprašanja, sodelovanja in vse, kar ni vezano na prijavo ambasadorjev."
+    },
+    "details": {
+      "introLabel": "Nagovor",
+      "intro": "Ta stran je za vse, kar ne spada v ambasadorsko prijavo. Vprašanja o projektu, predlogi sodelovanja, novinarske poizvedbe, pogovor z ekipo — vse na pravem mestu.",
+      "statement": "Odgovorimo čim prej.",
+      "listLabel": "Dosežeš nas",
+      "items": {
+        "email": {
+          "label": "Email",
+          "value": "info@genyxz.si"
+        },
+        "lokacija": {
+          "label": "Lokacija",
+          "value": "Ljubljana, Slovenija"
+        },
+        "ambasadorji": {
+          "label": "Za ambasadorske prijave",
+          "value": "Prijavi se →"
+        }
+      }
+    },
+    "form": {
+      "label": "Napiši nam",
+      "heading": "Imaš vprašanje ali predlog?",
+      "fields": {
+        "name": "Ime in priimek",
+        "email": "Email",
+        "subject": "Zadeva",
+        "message": "Sporočilo",
+        "consent": "Strinjam se z obdelavo osebnih podatkov za namen odgovora na sporočilo."
+      },
+      "placeholders": {
+        "name": "",
+        "email": "",
+        "subject": "",
+        "message": "Kaj imaš na srcu?"
+      },
+      "submit": "Pošlji sporočilo",
+      "success": {
+        "heading": "Hvala za sporočilo.",
+        "body": "Odgovorimo v najkrajšem možnem času.",
+        "reset": "Pošlji še eno sporočilo"
+      },
+      "errors": {
+        "required": "To polje je obvezno.",
+        "email": "Vnesi veljaven email naslov.",
+        "consent": "Za pošiljanje je potrebno soglasje."
+      }
+    },
+    "prehod": {
+      "label": "Pomembno",
+      "body": "Če te zanima ambasadorska vloga, prijava poteka ločeno — zato, da je postopek hiter in osredotočen.",
+      "link": "Pojdi na prijavo →"
+    },
     "hero_label": "Kontakt",
     "hero_title": "Stopi v stik.",
     "hero_subtitle": "Imaš vprašanje? Želiš sodelovati? Veseli bomo tvojega sporočila.",
@@ -179,6 +503,18 @@
     "ambassador_cta_title": "Želiš postati ambasador?",
     "ambassador_cta_text": "Pridruži se prvi generaciji GenYXZ ambasadorjev.",
     "ambassador_cta_button": "Postani ambasador"
+  },
+  "vizija": {
+    "label": "Vizija",
+    "heading": "Gradimo generacijo, ki razume prihodnost zdravja.",
+    "body": "Generacijo, ki zna kompleksne stvari razložiti preprosto, povezuje ljudi, znanje in prakso ter aktivno vpliva na okolje in skupnost.",
+    "statement": "GenYXZ ni projekt. Je platforma za ljudi, ki želijo biti del spremembe."
+  },
+  "finalCta": {
+    "heading": "Če želiš biti del tega:",
+    "button": "Postani ambasador",
+    "micro": "Prijava traja 2 minuti.",
+    "aria_label": "Postani ambasador — prijava traja 2 minuti"
   },
   "footer": {
     "tagline": "Nova generacija, ki razume prihodnost zdravja.",

@@ -1,107 +1,158 @@
-import {
-  IconHealthLeaf,
-  IconMicroscope,
-  IconUmbrellaShield,
-} from '../components/icons'
+import { useState } from 'react'
+import FinalCTA from '../components/FinalCTA'
+import { PARTNER_LOGOS } from '../utils/constants'
 import useTranslation from '../utils/useTranslation'
+
+function PartnerLogoCell({ partner, name, delay }) {
+  const [imageFailed, setImageFailed] = useState(false)
+  const shouldShowImage = Boolean(partner?.src) && !imageFailed
+
+  return (
+    <article className="partnerji-logo-cell" data-reveal data-reveal-delay={delay}>
+      {shouldShowImage ? (
+        <img
+          alt={name}
+          className={`partner-logo ${partner.sizeClass}`}
+          decoding="async"
+          loading="lazy"
+          onError={() => setImageFailed(true)}
+          src={partner.src}
+        />
+      ) : (
+        <p className="partnerji-logo-placeholder">{name}</p>
+      )}
+    </article>
+  )
+}
 
 export default function Partnerji() {
   const { t } = useTranslation()
 
-  const partners = [
-    t('partnerji.partner1_name'),
-    t('partnerji.partner2_name'),
-    t('partnerji.partner3_name'),
-    t('partnerji.partner4_name'),
-    t('partnerji.partner5_name'),
-    t('partnerji.partner6_name'),
-  ]
+  const orderedPartnerIds = ['drbest', 'abi', 'further', 'teladoc', 'geneplanet', 'axeria']
+  const gridNameById = {
+    drbest: t('partnerji.grid.partners.drbest'),
+    abi: t('partnerji.grid.partners.abihealth'),
+    further: t('partnerji.grid.partners.further'),
+    teladoc: t('partnerji.grid.partners.teladoc'),
+    geneplanet: t('partnerji.grid.partners.geneplanet'),
+    axeria: t('partnerji.grid.partners.axeria'),
+  }
 
-  const ecosystem = [
-    {
-      title: t('partnerji.eco1_title'),
-      text: t('partnerji.eco1_text'),
-      Icon: IconHealthLeaf,
-    },
-    {
-      title: t('partnerji.eco2_title'),
-      text: t('partnerji.eco2_text'),
-      Icon: IconMicroscope,
-    },
-    {
-      title: t('partnerji.eco3_title'),
-      text: t('partnerji.eco3_text'),
-      Icon: IconUmbrellaShield,
-    },
-  ]
+  const partners = orderedPartnerIds
+    .map((id) => PARTNER_LOGOS.find((partner) => partner.id === id))
+    .filter(Boolean)
+    .map((partner) => ({
+      ...partner,
+      displayName: gridNameById[partner.id],
+    }))
+
+  const pillarKeys = ['one', 'two', 'three']
+  const pillars = pillarKeys.map((key) => ({
+    id: key,
+    number: t(`partnerji.stebri.blocks.${key}.number`),
+    heading: t(`partnerji.stebri.blocks.${key}.heading`),
+    body: t(`partnerji.stebri.blocks.${key}.body`),
+  }))
 
   return (
     <>
-      <section className="section-block section-bg page-hero">
-        <div className="layout-container editorial-block">
-          <p className="section-label" data-reveal>
-            {t('labels.partnerji')}
+      <section className="section-block section-bg page-hero partnerji-hero">
+        <div className="layout-container partnerji-hero-inner">
+          <p className="partnerji-eyebrow" data-reveal>
+            {t('partnerji.hero.label')}
           </p>
-          <p className="section-context" data-reveal data-reveal-delay="80">
-            {t('partnerji.hero_label')}
-          </p>
-          <h1 className="section-title" data-reveal data-reveal-delay="140">
-            {t('partnerji.hero_title')}
+          <h1 className="partnerji-hero-heading" data-reveal data-reveal-delay="90">
+            {t('partnerji.hero.heading')}
           </h1>
-          <p className="section-text" data-reveal data-reveal-delay="190">
-            {t('partnerji.hero_subtitle')}
+          <p className="partnerji-hero-subtitle" data-reveal data-reveal-delay="160">
+            {t('partnerji.hero.subtitle')}
           </p>
-          <p className="section-text" data-reveal data-reveal-delay="240">
-            {t('partnerji.intro_text')}
-          </p>
+          <div aria-hidden="true" className="partnerji-hero-divider" data-reveal data-reveal-delay="220" />
         </div>
       </section>
 
-      <section className="section-block section-surface">
-        <div className="layout-container">
-          <p className="section-label" data-reveal>
-            {t('labels.partnerji')}
+      <section className="section-block section-surface partnerji-avtoriteta">
+        <div className="layout-container partnerji-avtoriteta-grid">
+          <div className="partnerji-avtoriteta-left">
+            <p className="partnerji-eyebrow" data-reveal>
+              {t('partnerji.avtoriteta.label')}
+            </p>
+            <h2 className="partnerji-section-title" data-reveal data-reveal-delay="80">
+              {t('partnerji.avtoriteta.heading')}
+            </h2>
+          </div>
+
+          <div className="partnerji-avtoriteta-right">
+            <blockquote className="partnerji-authority-quote" data-reveal data-reveal-delay="130">
+              <p className="partnerji-authority-statement">{t('partnerji.avtoriteta.statement')}</p>
+            </blockquote>
+            <div aria-hidden="true" className="partnerji-authority-divider" data-reveal data-reveal-delay="190" />
+            <p className="partnerji-authority-body" data-reveal data-reveal-delay="230">
+              {t('partnerji.avtoriteta.body')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block section-bg partnerji-grid">
+        <div className="layout-container partnerji-grid-inner">
+          <p className="partnerji-eyebrow" data-reveal>
+            {t('partnerji.grid.label')}
           </p>
-          <p className="section-context" data-reveal data-reveal-delay="80">
-            {t('partnerji.logos_label')}
-          </p>
-          <h2 className="section-title" data-reveal data-reveal-delay="130">
-            {t('partnerji.logos_title')}
+          <h2 className="partnerji-section-title" data-reveal data-reveal-delay="90">
+            {t('partnerji.grid.heading')}
           </h2>
-          <div className="logo-grid">
+
+          <div className="partnerji-logo-matrix">
             {partners.map((partner, index) => (
-              <div className="logo-box" data-reveal data-reveal-delay={120 + index * 50} key={partner}>
-                {partner}
-              </div>
+              <PartnerLogoCell delay={130 + index * 60} key={partner.id} name={partner.displayName} partner={partner} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-block section-bg">
-        <div className="layout-container">
-          <p className="section-label" data-reveal>
-            {t('labels.kaj_delamo')}
+      <section className="section-block partnerji-stebri">
+        <div aria-hidden="true" className="partnerji-stebri-glow" />
+        <div className="layout-container partnerji-stebri-inner">
+          <p className="partnerji-eyebrow partnerji-eyebrow-light" data-reveal>
+            {t('partnerji.stebri.label')}
           </p>
-          <p className="section-context" data-reveal data-reveal-delay="80">
-            {t('partnerji.ecosystem_label')}
-          </p>
-          <h2 className="section-title" data-reveal data-reveal-delay="130">
-            {t('partnerji.ecosystem_title')}
+          <h2 className="partnerji-section-title partnerji-section-title-light" data-reveal data-reveal-delay="90">
+            {t('partnerji.stebri.heading')}
           </h2>
 
-          <div className="ecosystem-grid">
-            {ecosystem.map((item, index) => (
-              <article className="ecosystem-item" data-reveal data-reveal-delay={120 + index * 60} key={item.title}>
-                <p className="ecosystem-number">{String(index + 1).padStart(2, '0')}</p>
-                <item.Icon className="icon-xl ecosystem-icon" />
-                <h3 className="soft-card-title">{item.title}</h3>
-                <p className="soft-card-copy">{item.text}</p>
+          <div className="partnerji-stebri-rows">
+            {pillars.map((item, index) => (
+              <article className="partnerji-stebri-row" data-reveal data-reveal-delay={150 + index * 90} key={item.id}>
+                <p aria-hidden="true" className="partnerji-stebri-number">
+                  {item.number}
+                </p>
+                <div className="partnerji-stebri-copy">
+                  <h3 className="partnerji-stebri-heading">{item.heading}</h3>
+                  <p className="partnerji-stebri-body">{item.body}</p>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
+
+      <section className="section-block section-surface partnerji-povezava">
+        <div className="layout-container partnerji-povezava-inner">
+          <div aria-hidden="true" className="partnerji-povezava-divider" data-reveal />
+          <p className="partnerji-eyebrow" data-reveal data-reveal-delay="70">
+            {t('partnerji.povezava.label')}
+          </p>
+          <p className="partnerji-povezava-body" data-reveal data-reveal-delay="130">
+            {t('partnerji.povezava.body')}
+          </p>
+          <p className="partnerji-povezava-statement" data-reveal data-reveal-delay="180">
+            {t('partnerji.povezava.statement')}
+          </p>
+        </div>
+      </section>
+
+      <FinalCTA />
     </>
   )
 }
