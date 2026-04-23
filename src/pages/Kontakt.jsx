@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import FinalCTA from '../components/FinalCTA'
 import { AMBASSADOR_URL } from '../utils/constants'
+import renderPlumWords from '../utils/renderPlumWords'
 import useTranslation from '../utils/useTranslation'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -80,7 +81,7 @@ export default function Kontakt() {
             {t('kontakt.hero.label')}
           </p>
           <h1 className="kontakt-hero-heading" data-reveal data-reveal-delay="90">
-            {t('kontakt.hero.heading')}
+            {renderPlumWords(t('kontakt.hero.heading'))}
           </h1>
           <p className="kontakt-hero-subtitle" data-reveal data-reveal-delay="160">
             {t('kontakt.hero.subtitle')}
@@ -99,7 +100,7 @@ export default function Kontakt() {
               {t('kontakt.details.intro')}
             </p>
             <p className="kontakt-details-statement" data-reveal data-reveal-delay="170">
-              {t('kontakt.details.statement')}
+              {renderPlumWords(t('kontakt.details.statement'))}
             </p>
           </div>
 
@@ -135,7 +136,7 @@ export default function Kontakt() {
             {t('kontakt.form.label')}
           </p>
           <h2 className="kontakt-section-title" data-reveal data-reveal-delay="90">
-            {t('kontakt.form.heading')}
+            {renderPlumWords(t('kontakt.form.heading'))}
           </h2>
 
           {isSubmitted ? (

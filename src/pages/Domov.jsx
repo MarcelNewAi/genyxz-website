@@ -5,17 +5,27 @@ import { AMBASSADOR_URL, PARTNER_LOGOS } from '../utils/constants'
 import useTranslation from '../utils/useTranslation'
 
 function renderGradientWord(title) {
-  const parts = title.split(/(prihodnost)/i)
+  const parts = title.split(/(zdravje|prihodnost|prihodnosti)/i)
 
-  return parts.map((part, index) =>
-    /^prihodnost$/i.test(part) ? (
-      <span className="gradient-word" key={`${part}-${index}`}>
-        {part}
-      </span>
-    ) : (
-      <span key={`${part}-${index}`}>{part}</span>
-    ),
-  )
+  return parts.map((part, index) => {
+    if (/^zdravje$/i.test(part)) {
+      return (
+        <span className="gradient-word" key={`${part}-${index}`}>
+          {part}
+        </span>
+      )
+    }
+
+    if (/^prihodnost(i)?$/i.test(part)) {
+      return (
+        <span className="plum-word-bold" key={`${part}-${index}`}>
+          {part}
+        </span>
+      )
+    }
+
+    return <span key={`${part}-${index}`}>{part}</span>
+  })
 }
 
 export default function Domov() {

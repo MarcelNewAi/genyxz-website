@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import FinalCTA from '../components/FinalCTA'
+import renderPlumWords from '../utils/renderPlumWords'
 import { PARTNER_LOGOS } from '../utils/constants'
 import useTranslation from '../utils/useTranslation'
 
@@ -62,7 +63,7 @@ export default function Partnerji() {
             {t('partnerji.hero.label')}
           </p>
           <h1 className="partnerji-hero-heading" data-reveal data-reveal-delay="90">
-            {t('partnerji.hero.heading')}
+            {renderPlumWords(t('partnerji.hero.heading'))}
           </h1>
           <p className="partnerji-hero-subtitle" data-reveal data-reveal-delay="160">
             {t('partnerji.hero.subtitle')}
@@ -78,7 +79,7 @@ export default function Partnerji() {
               {t('partnerji.avtoriteta.label')}
             </p>
             <h2 className="partnerji-section-title" data-reveal data-reveal-delay="80">
-              {t('partnerji.avtoriteta.heading')}
+              {renderPlumWords(t('partnerji.avtoriteta.heading'))}
             </h2>
           </div>
 
@@ -100,7 +101,7 @@ export default function Partnerji() {
             {t('partnerji.grid.label')}
           </p>
           <h2 className="partnerji-section-title" data-reveal data-reveal-delay="90">
-            {t('partnerji.grid.heading')}
+            {renderPlumWords(t('partnerji.grid.heading'))}
           </h2>
 
           <div className="partnerji-logo-matrix">
@@ -147,7 +148,7 @@ export default function Partnerji() {
             {t('partnerji.povezava.body')}
           </p>
           <p className="partnerji-povezava-statement" data-reveal data-reveal-delay="180">
-            {t('partnerji.povezava.statement')}
+            {renderPlumWords(t('partnerji.povezava.statement'))}
           </p>
         </div>
       </section>

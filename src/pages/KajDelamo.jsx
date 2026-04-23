@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import FinalCTA from '../components/FinalCTA'
+import renderPlumWords from '../utils/renderPlumWords'
 import useTranslation from '../utils/useTranslation'
 
 export default function KajDelamo() {
@@ -30,7 +31,7 @@ export default function KajDelamo() {
             {t('kajdelamo.hero.label')}
           </p>
           <h1 className="kajdelamo-hero-heading" data-reveal data-reveal-delay="90">
-            {t('kajdelamo.hero.heading')}
+            {renderPlumWords(t('kajdelamo.hero.heading'))}
           </h1>
           <p className="kajdelamo-hero-subtitle" data-reveal data-reveal-delay="160">
             {t('kajdelamo.hero.subtitle')}
@@ -45,7 +46,7 @@ export default function KajDelamo() {
             {t('kajdelamo.delamo.label')}
           </p>
           <h2 className="kajdelamo-section-title" data-reveal data-reveal-delay="90">
-            {t('kajdelamo.delamo.heading')}
+            {renderPlumWords(t('kajdelamo.delamo.heading'))}
           </h2>
 
           <div className="kajdelamo-activity-rows">
@@ -106,7 +107,7 @@ export default function KajDelamo() {
             {t('kajdelamo.prehod.body')}
           </p>
           <p className="kajdelamo-prehod-statement" data-reveal data-reveal-delay="180">
-            {t('kajdelamo.prehod.statement')}
+            {renderPlumWords(t('kajdelamo.prehod.statement'))}
           </p>
           <p data-reveal data-reveal-delay="220">
             <Link className="kajdelamo-prehod-link" to="/partnerji">

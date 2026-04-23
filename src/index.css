@@ -83,6 +83,8 @@
 @theme {
   --color-primary: #43d1ab;
   --color-secondary: #88ea4e;
+  --color-accent-plum: #582a71;
+  --color-accent-plum-soft: #7a5a8f;
   --color-background: #f0f4f8;
   --color-surface: #ffffff;
   --color-text-primary: #133156;
@@ -290,7 +292,7 @@
 
   .soft-card:hover {
     transform: translateY(-5px);
-    border-color: color-mix(in srgb, var(--color-primary) 36%, var(--color-border));
+    border-color: color-mix(in srgb, var(--color-accent-plum-soft) 42%, var(--color-border));
     box-shadow: 0 20px 46px rgba(19, 49, 86, 0.14);
   }
 
@@ -302,7 +304,7 @@
   }
 
   .soft-card:hover .soft-card-icon {
-    color: var(--color-primary);
+    color: var(--color-accent-plum);
   }
 
   .soft-card-title {
@@ -358,8 +360,8 @@
 
   .logo-box:hover {
     transform: translateY(-4px);
-    border-color: color-mix(in srgb, var(--color-primary) 34%, var(--color-border));
-    box-shadow: 0 18px 36px rgba(67, 209, 171, 0.14);
+    border-color: color-mix(in srgb, var(--color-accent-plum-soft) 36%, var(--color-border));
+    box-shadow: 0 18px 36px rgba(88, 42, 113, 0.16);
   }
 
   .logo-box-brand {
@@ -496,6 +498,11 @@
     color: transparent;
   }
 
+  .plum-word-bold {
+    color: var(--color-accent-plum);
+    font-weight: 900;
+  }
+
   .site-navbar {
     position: fixed;
     top: 0;
@@ -531,14 +538,14 @@
 
   .brand-wordmark-image {
     display: block;
-    height: 48px;
+    height: 40px;
     width: auto;
-    max-width: 260px;
+    max-width: 220px;
   }
 
   .site-footer .brand-wordmark-image {
-    height: 52px;
-    max-width: 290px;
+    height: 44px;
+    max-width: 245px;
   }
 
   .navbar-center {
@@ -866,6 +873,15 @@
     width: min(420px, 100%);
   }
 
+  .domov-bridge-divider.divider-line {
+    background: linear-gradient(
+      90deg,
+      rgba(216, 226, 238, 0.2),
+      rgba(88, 42, 113, 0.64),
+      rgba(216, 226, 238, 0.2)
+    );
+  }
+
   .domov-teasers {
     padding: 96px 0;
   }
@@ -912,7 +928,7 @@
 
   .domov-teaser-card:hover {
     transform: translateY(-4px);
-    border-color: color-mix(in srgb, var(--color-primary) 28%, var(--color-border));
+    border-color: color-mix(in srgb, var(--color-accent-plum-soft) 52%, var(--color-border));
     box-shadow: 0 18px 40px rgba(19, 49, 86, 0.13);
   }
 
@@ -959,6 +975,7 @@
   }
 
   .domov-teaser-card:hover .domov-teaser-arrow {
+    color: rgba(88, 42, 113, 0.78);
     transform: translate(4px, -4px);
   }
 
@@ -1109,7 +1126,7 @@
   }
 
   .onas-primer-note {
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid rgba(88, 42, 113, 0.82);
     padding-left: 1.7rem;
     display: grid;
     gap: 1rem;
@@ -1138,7 +1155,7 @@
   .onas-primer-divider {
     height: 1px;
     width: 100%;
-    background: color-mix(in srgb, var(--color-border) 88%, white);
+    background: rgba(88, 42, 113, 0.56);
   }
 
   .onas-zakaj {
@@ -1349,8 +1366,8 @@
 
   .ambasadorji-kdo-line {
     width: min(80px, 100%);
-    height: 1px;
-    background: color-mix(in srgb, var(--color-primary) 66%, transparent);
+    height: 2px;
+    background: rgba(88, 42, 113, 0.72);
   }
 
   .ambasadorji-kdo-categories-line {
@@ -1482,7 +1499,7 @@
 
   .ambasadorji-plus-label {
     margin: 0;
-    color: var(--color-primary);
+    color: var(--color-accent-plum);
     font-family: var(--font-heading);
     font-size: 0.76rem;
     font-weight: 600;
@@ -1722,8 +1739,8 @@
   }
 
   .kontakt-editorial-link:hover {
-    color: var(--color-navy);
-    text-decoration-color: var(--color-navy);
+    color: var(--color-accent-plum);
+    text-decoration-color: var(--color-accent-plum);
   }
 
   .kontakt-form-section {
@@ -1836,7 +1853,7 @@
 
   .kontakt-form-success {
     margin-top: 0.4rem;
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid rgba(88, 42, 113, 0.82);
     padding-left: clamp(1rem, 3vw, 1.5rem);
     display: grid;
     gap: 0.6rem;
@@ -1894,7 +1911,7 @@
   .kontakt-prehod-divider {
     width: 100%;
     height: 1px;
-    background: rgba(216, 226, 238, 0.95);
+    background: rgba(88, 42, 113, 0.5);
   }
 
   .kontakt-prehod-body {
@@ -1997,7 +2014,7 @@
 
   .partnerji-authority-quote {
     margin: 0;
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid rgba(88, 42, 113, 0.82);
     padding-left: clamp(1.2rem, 3vw, 2rem);
   }
 
@@ -2014,7 +2031,7 @@
   .partnerji-authority-divider {
     width: 100%;
     height: 1px;
-    background: rgba(216, 226, 238, 0.95);
+    background: rgba(88, 42, 113, 0.52);
   }
 
   .partnerji-authority-body {
@@ -2074,7 +2091,7 @@
   }
 
   .partnerji-logo-cell:hover .partnerji-logo-placeholder {
-    color: var(--color-primary);
+    color: var(--color-accent-plum);
     transform: scale(1.03);
   }
 
@@ -2439,7 +2456,7 @@
   .kajdelamo-prehod-divider {
     width: 100%;
     height: 1px;
-    background: rgba(216, 226, 238, 0.95);
+    background: rgba(88, 42, 113, 0.5);
   }
 
   .kajdelamo-prehod-body {
@@ -2471,8 +2488,8 @@
   }
 
   .kajdelamo-prehod-link:hover {
-    color: var(--color-navy);
-    text-decoration-color: var(--color-navy);
+    color: var(--color-accent-plum);
+    text-decoration-color: var(--color-accent-plum);
   }
 
   .decor-blob {
@@ -2531,7 +2548,7 @@
   }
 
   .number-item-index {
-    color: var(--color-primary);
+    color: var(--color-accent-plum);
     font-family: var(--font-heading);
     font-weight: 800;
     min-width: 1.9rem;
@@ -2581,11 +2598,11 @@
   .dna-feature-icon {
     width: 62px;
     height: 62px;
-    color: var(--color-primary);
+    color: var(--color-accent-plum);
   }
 
   .accent-callout {
-    border-left: 3px solid var(--color-primary);
+    border-left: 3px solid rgba(88, 42, 113, 0.74);
     background: color-mix(in srgb, var(--color-primary) 8%, white);
     border-radius: 0 18px 18px 0;
     padding: 1.35rem 1.2rem;
@@ -2601,13 +2618,13 @@
 
   .badge-pill {
     border-radius: 999px;
-    border: 1px solid color-mix(in srgb, var(--color-primary) 34%, var(--color-border));
+    border: 1px solid color-mix(in srgb, var(--color-accent-plum-soft) 40%, var(--color-border));
     padding: 0.5rem 0.95rem;
     font-family: var(--font-heading);
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--color-text-primary);
-    background: color-mix(in srgb, var(--color-primary) 9%, white);
+    background: color-mix(in srgb, var(--color-accent-plum-soft) 12%, white);
   }
 
   .benefit-list {
@@ -2930,7 +2947,8 @@
     inset: 0;
     pointer-events: none;
     background:
-      radial-gradient(circle at 82% 14%, color-mix(in srgb, var(--color-primary) 22%, transparent) 0%, transparent 58%);
+      radial-gradient(circle at 82% 14%, color-mix(in srgb, var(--color-primary) 22%, transparent) 0%, transparent 58%),
+      radial-gradient(circle at 18% 72%, rgba(122, 90, 143, 0.46) 0%, rgba(122, 90, 143, 0) 58%);
     opacity: 0.6;
   }
 
@@ -3095,8 +3113,8 @@
   }
 
   .site-navbar .brand-wordmark-image {
-    height: 42px;
-    max-width: 230px;
+    height: 36px;
+    max-width: 200px;
   }
 
   .navbar-center,

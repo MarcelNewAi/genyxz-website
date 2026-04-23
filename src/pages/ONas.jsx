@@ -1,5 +1,6 @@
 import FinalCTA from '../components/FinalCTA'
 import VizijaBlock from '../components/VizijaBlock'
+import renderPlumWords from '../utils/renderPlumWords'
 import useTranslation from '../utils/useTranslation'
 
 export default function ONas() {
@@ -31,7 +32,7 @@ export default function ONas() {
             {t('onas.hero.label')}
           </p>
           <h1 className="onas-hero-heading" data-reveal data-reveal-delay="90">
-            {t('onas.hero.heading')}
+            {renderPlumWords(t('onas.hero.heading'))}
           </h1>
           <p className="onas-hero-subtitle" data-reveal data-reveal-delay="150">
             {t('onas.hero.subtitle')}
@@ -46,7 +47,7 @@ export default function ONas() {
             {t('onas.kaj.label')}
           </p>
           <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
-            {t('onas.kaj.heading')}
+            {renderPlumWords(t('onas.kaj.heading'))}
           </h2>
           <div className="onas-kaj-grid">
             <div className="onas-kaj-main">
@@ -108,7 +109,7 @@ export default function ONas() {
               {t('onas.simbol.label')}
             </p>
             <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
-              {t('onas.simbol.heading')}
+              {renderPlumWords(t('onas.simbol.heading'))}
             </h2>
             <p className="onas-body" data-reveal data-reveal-delay="150">
               {t('onas.simbol.body')}
