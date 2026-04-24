@@ -50,6 +50,9 @@ export default function ONas() {
 
       <section className="section-block section-surface onas-kaj">
         <div className="layout-container">
+          <p className="section-context onas-kaj-context" data-reveal data-reveal-delay="50">
+            {t('onas.kaj.label')}
+          </p>
           <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
             {renderPlumWords(t('onas.kaj.heading'))}
           </h2>

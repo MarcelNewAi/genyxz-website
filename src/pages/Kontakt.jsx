@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import CopyEmailLink from '../components/CopyEmailLink'
 import FinalCTA from '../components/FinalCTA'
 import { AMBASSADOR_URL } from '../utils/constants'
 import renderPlumWords from '../utils/renderPlumWords'
@@ -104,6 +105,9 @@ export default function Kontakt() {
       <section className="section-block section-surface kontakt-details">
         <div className="layout-container kontakt-details-grid">
           <div className="kontakt-details-intro">
+            <p className="section-label kontakt-details-title" data-reveal data-reveal-delay="70">
+              {t('kontakt.details.title')}
+            </p>
             <p className="kontakt-details-body" data-reveal data-reveal-delay="100">
               {t('kontakt.details.intro')}
             </p>
@@ -113,12 +117,17 @@ export default function Kontakt() {
           </div>
 
           <div className="kontakt-details-list-wrap">
+            <p className="section-label kontakt-details-list-title" data-reveal data-reveal-delay="90">
+              {t('kontakt.details.listLabel')}
+            </p>
             <ul className="kontakt-details-list">
               <li className="kontakt-details-item" data-reveal data-reveal-delay="120">
                 <p className="kontakt-details-item-label">{t('kontakt.details.items.email.label')}</p>
-                <a className="kontakt-editorial-link" href={`mailto:${t('kontakt.details.items.email.value')}`}>
-                  {t('kontakt.details.items.email.value')}
-                </a>
+                <CopyEmailLink
+                  className="kontakt-editorial-link kontakt-email-highlight"
+                  copiedLabel={t('kontakt.copy_email_success')}
+                  email={t('kontakt.details.items.email.value')}
+                />
               </li>
               <li className="kontakt-details-item" data-reveal data-reveal-delay="180">
                 <p className="kontakt-details-item-label">{t('kontakt.details.items.lokacija.label')}</p>
@@ -137,114 +146,121 @@ export default function Kontakt() {
 
       <section className="section-block section-bg kontakt-form-section">
         <div className="layout-container kontakt-form-inner">
-          <h2 className="kontakt-section-title" data-reveal data-reveal-delay="90">
-            {renderPlumWords(t('kontakt.form.heading'))}
-          </h2>
+          <div className="kontakt-form-content">
+            <h2 className="kontakt-section-title" data-reveal data-reveal-delay="90">
+              {renderPlumWords(t('kontakt.form.heading'))}
+            </h2>
 
-          {isSubmitted ? (
-            <div className="kontakt-form-success" data-reveal data-reveal-delay="150">
-              <h3 className="kontakt-form-success-heading">{t('kontakt.form.success.heading')}</h3>
-              <p className="kontakt-form-success-body">{t('kontakt.form.success.body')}</p>
-              <button className="kontakt-editorial-reset" onClick={handleReset} type="button">
-                {t('kontakt.form.success.reset')}
-              </button>
-            </div>
-          ) : (
-            <form className="kontakt-form-grid" data-reveal data-reveal-delay="150" noValidate onSubmit={handleSubmit}>
-              <label className="kontakt-form-field">
-                <span className="kontakt-form-label">
-                  {t('kontakt.form.fields.name')}
-                  <span aria-hidden="true" className="kontakt-required-mark">
-                    *
+            {isSubmitted ? (
+              <div className="kontakt-form-success" data-reveal data-reveal-delay="150">
+                <h3 className="kontakt-form-success-heading">{t('kontakt.form.success.heading')}</h3>
+                <p className="kontakt-form-success-body">{t('kontakt.form.success.body')}</p>
+                <button className="kontakt-editorial-reset" onClick={handleReset} type="button">
+                  {t('kontakt.form.success.reset')}
+                </button>
+              </div>
+            ) : (
+              <form className="kontakt-form-grid" data-reveal data-reveal-delay="150" noValidate onSubmit={handleSubmit}>
+                <label className="kontakt-form-field">
+                  <span className="kontakt-form-label">
+                    {t('kontakt.form.fields.name')}
+                    <span aria-hidden="true" className="kontakt-required-mark">
+                      *
+                    </span>
                   </span>
-                </span>
-                <input
-                  className="kontakt-form-input"
-                  name="name"
-                  onChange={handleInputChange}
-                  placeholder={t('kontakt.form.placeholders.name')}
-                  type="text"
-                  value={values.name}
-                />
-                {errors.name ? <p className="kontakt-form-error">{errors.name}</p> : null}
-              </label>
+                  <input
+                    className="kontakt-form-input"
+                    name="name"
+                    onChange={handleInputChange}
+                    placeholder={t('kontakt.form.placeholders.name')}
+                    type="text"
+                    value={values.name}
+                  />
+                  {errors.name ? <p className="kontakt-form-error">{errors.name}</p> : null}
+                </label>
 
-              <label className="kontakt-form-field">
-                <span className="kontakt-form-label">
-                  {t('kontakt.form.fields.email')}
-                  <span aria-hidden="true" className="kontakt-required-mark">
-                    *
+                <label className="kontakt-form-field">
+                  <span className="kontakt-form-label">
+                    {t('kontakt.form.fields.email')}
+                    <span aria-hidden="true" className="kontakt-required-mark">
+                      *
+                    </span>
                   </span>
-                </span>
-                <input
-                  className="kontakt-form-input"
-                  name="email"
-                  onChange={handleInputChange}
-                  placeholder={t('kontakt.form.placeholders.email')}
-                  type="email"
-                  value={values.email}
-                />
-                {errors.email ? <p className="kontakt-form-error">{errors.email}</p> : null}
-              </label>
+                  <input
+                    className="kontakt-form-input"
+                    name="email"
+                    onChange={handleInputChange}
+                    placeholder={t('kontakt.form.placeholders.email')}
+                    type="email"
+                    value={values.email}
+                  />
+                  {errors.email ? <p className="kontakt-form-error">{errors.email}</p> : null}
+                </label>
 
-              <label className="kontakt-form-field">
-                <span className="kontakt-form-label">{t('kontakt.form.fields.subject')}</span>
-                <input
-                  className="kontakt-form-input"
-                  name="subject"
-                  onChange={handleInputChange}
-                  placeholder={t('kontakt.form.placeholders.subject')}
-                  type="text"
-                  value={values.subject}
-                />
-              </label>
+                <label className="kontakt-form-field">
+                  <span className="kontakt-form-label">{t('kontakt.form.fields.subject')}</span>
+                  <input
+                    className="kontakt-form-input"
+                    name="subject"
+                    onChange={handleInputChange}
+                    placeholder={t('kontakt.form.placeholders.subject')}
+                    type="text"
+                    value={values.subject}
+                  />
+                </label>
 
-              <label className="kontakt-form-field">
-                <span className="kontakt-form-label">
-                  {t('kontakt.form.fields.message')}
-                  <span aria-hidden="true" className="kontakt-required-mark">
-                    *
+                <label className="kontakt-form-field">
+                  <span className="kontakt-form-label">
+                    {t('kontakt.form.fields.message')}
+                    <span aria-hidden="true" className="kontakt-required-mark">
+                      *
+                    </span>
                   </span>
-                </span>
-                <textarea
-                  className="kontakt-form-input kontakt-form-textarea"
-                  name="message"
-                  onChange={handleInputChange}
-                  placeholder={t('kontakt.form.placeholders.message')}
-                  rows="5"
-                  value={values.message}
-                />
-                {errors.message ? <p className="kontakt-form-error">{errors.message}</p> : null}
-              </label>
+                  <textarea
+                    className="kontakt-form-input kontakt-form-textarea"
+                    name="message"
+                    onChange={handleInputChange}
+                    placeholder={t('kontakt.form.placeholders.message')}
+                    rows="5"
+                    value={values.message}
+                  />
+                  {errors.message ? <p className="kontakt-form-error">{errors.message}</p> : null}
+                </label>
 
-              <label className="kontakt-consent-field">
-                <input checked={values.consent} name="consent" onChange={handleInputChange} type="checkbox" />
-                <span className="kontakt-consent-label">
-                  {t('kontakt.form.fields.consent')}
-                  <span aria-hidden="true" className="kontakt-required-mark">
-                    *
+                <label className={`kontakt-consent-field${errors.consent ? ' has-error' : ''}`}>
+                  <span className="kontakt-consent-check-wrap">
+                    <input
+                      checked={values.consent}
+                      className="kontakt-consent-input"
+                      name="consent"
+                      onChange={handleInputChange}
+                      type="checkbox"
+                    />
+                    <span aria-hidden="true" className="kontakt-consent-checkmark">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2 6.2 4.7 9 10 3.6" />
+                      </svg>
+                    </span>
                   </span>
-                </span>
-              </label>
-              {errors.consent ? <p className="kontakt-form-error">{errors.consent}</p> : null}
+                  <span className="kontakt-consent-label">
+                    {t('kontakt.form.fields.consent')}
+                    <span aria-hidden="true" className="kontakt-required-mark">
+                      *
+                    </span>
+                  </span>
+                </label>
+                {errors.consent ? <p className="kontakt-form-error">{errors.consent}</p> : null}
 
-              <button className="btn btn-primary kontakt-form-submit" type="submit">
-                {t('kontakt.form.submit')}
-              </button>
-            </form>
-          )}
-        </div>
-      </section>
+                <button className="btn btn-primary kontakt-form-submit" type="submit">
+                  {t('kontakt.form.submit')}
+                </button>
+              </form>
+            )}
+          </div>
 
-      <section className="section-block section-surface kontakt-prehod">
-        <div className="layout-container kontakt-prehod-inner">
-          <div aria-hidden="true" className="kontakt-prehod-divider" data-reveal />
-          <p className="kontakt-prehod-body" data-reveal data-reveal-delay="140">
-            {t('kontakt.prehod.body')}{' '}
-            <a className="kontakt-editorial-link" href={AMBASSADOR_URL}>
-              {t('kontakt.prehod.link')}
-            </a>
-          </p>
+          <div aria-hidden="true" className="kontakt-form-figure-wrap" data-reveal data-reveal-delay="180">
+            <img alt="" className="kontakt-form-figure" decoding="async" loading="lazy" src="/turtle-dna5.svg" />
+          </div>
         </div>
       </section>
 

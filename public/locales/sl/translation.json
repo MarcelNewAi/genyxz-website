@@ -203,7 +203,7 @@
       "subtitle": "Ne gre za klasično promocijo. Gre za razumevanje in prenos znanja."
     },
     "delamo": {
-      "label": "Naše delovanje",
+      "label": "NAŠE DELO",
       "heading": "Štirje stebri našega dela.",
       "blocks": {
         "one": {
@@ -214,7 +214,7 @@
         "two": {
           "number": "02",
           "heading": "Organiziramo pogovore in dogodke",
-          "body": "Manjši dogodki, predstavitve, neformalna srečanja. Kjer se ljudje lahko vprašajo, ne da bi se počutili neumno."
+          "body": "Majhni dogodki, predstavitve, neformalna srečanja. Kjer se ljudje lahko vprašajo, ne da bi se počutili neumno."
         },
         "three": {
           "number": "03",
@@ -223,8 +223,8 @@
         },
         "four": {
           "number": "04",
-          "heading": "Gradimo skupnosti v lokalnem okolju",
-          "body": "Skupnost ni abstrakcija. Je ljudje, ki se poznajo, zaupajo drug drugemu in skupaj rastejo."
+          "heading": "Gradimo mostove med stroko in vsakdanom",
+          "body": "Sodobna medicina ponuja izjemne možnosti — a le, če ljudje vedo, da obstajajo. Mi poskrbimo, da izvedo."
         }
       },
       "closer": "Ne gre za klasično promocijo. Gre za razumevanje in prenos znanja."
@@ -273,6 +273,7 @@
     "grid": {
       "label": "Naši partnerji",
       "heading": "Šest organizacij, ki oblikujejo okolje.",
+      "more_below_note": "Spodaj boste izvedeli več o vsakem partnerju.",
       "partners": {
         "drbest": "Dr Best",
         "abihealth": "Abi Health",
@@ -280,6 +281,38 @@
         "teladoc": "Teladoc",
         "geneplanet": "GenePlanet",
         "axeria": "Axeria"
+      }
+    },
+    "slides": {
+      "abi": {
+        "title": "Abi Global Health",
+        "description": "Abi je irsko podjetje, ustanovljeno leta 2016, ki razvija napredno virtualno zdravstveno oskrbo. Njihova platforma združuje klinično strokovno znanje z umetno inteligenco in omogoča takojšen dostop do zdravstvenih storitev — kjerkoli in kadarkoli. Cilj je preprost: srečati ljudi tam, kjer so, in dokazati vrednost z merljivimi rezultati.",
+        "cta": "Obiščite spletno stran"
+      },
+      "drBest": {
+        "title": "Dr Best",
+        "description": "Želimo, da vaših možnosti ozdravitve ne bi določale meje države. S paketi Dr Best Critical Advantage si zagotovite drugo mnenje vrhunskih svetovnih zdravnikov specialistov ter zdravljenje težjih bolezni v najboljših klinikah v tujini — vključno z organizacijo potovanja in namestitve.",
+        "cta": "Obiščite spletno stran"
+      },
+      "further": {
+        "title": "Further",
+        "description": "Further je vodilni specialist za načrtovanje in razvoj nišnih zdravstvenih zavarovalnih produktov in storitev. Od ustanovitve leta 2012 deluje v več kot 30 državah s preko 300 partnerji med zavarovalnicami in podjetji. Njihovo poslanstvo: izenačiti pogoje in zagotoviti resnično globalne zdravstvene rešitve.",
+        "cta": "Obiščite spletno stran"
+      },
+      "axeria": {
+        "title": "Axeria",
+        "description": "Axeria je francoska zavarovalnica, specializirana za posredniško distribucijo premoženjskih in odškodninskih zavarovalnih rešitev za strokovnjake in podjetja. Že več kot 30 let oblikujejo prilagojene zavarovalniške rešitve za posrednike v Franciji in Evropi — z agilnim, tehničnim pristopom, ki odgovarja na izzive trga.",
+        "cta": "Obiščite spletno stran"
+      },
+      "teladoc": {
+        "title": "Teladoc Health",
+        "description": "Teladoc Health je globalna platforma za virtualno zdravstveno oskrbo, ki omogoča 24/7 dostop do licenciranih strokovnjakov za nujno oskrbo, duševno zdravje, obvladovanje kroničnih bolezni in primarno oskrbo prek telefona ali videoklica. Storitev ponuja priročno, podatkovno podprto alternativo obiskom v ordinaciji.",
+        "cta": "Obiščite spletno stran"
+      },
+      "geneplanet": {
+        "title": "GenePlanet",
+        "description": "GenePlanet je vodilno evropsko biotehnološko podjetje s sedežem v Sloveniji, ki ponuja personalizirano preventivno genetsko testiranje in celovito sekvenciranje genoma. Njihovi testi življenjskega sloga, NIPT in presejalni testi za raka so dostopni v več kot 30 državah — z vizijo zamenjati enoten pristop k zdravju s prilagojenim.",
+        "cta": "Obiščite spletno stran"
       }
     },
     "stebri": {
@@ -431,6 +464,7 @@
       "subtitle": "Za vprašanja, sodelovanja in vse, kar ni vezano na prijavo ambasadorjev."
     },
     "details": {
+      "title": "Kontaktne informacije",
       "introLabel": "Nagovor",
       "intro": "Ta stran je za vse, kar ne spada v ambasadorsko prijavo. Vprašanja o projektu, predlogi sodelovanja, novinarske poizvedbe, pogovor z ekipo — vse na pravem mestu.",
       "statement": "Odgovorimo čim prej.",
@@ -486,6 +520,7 @@
     "hero_label": "Kontakt",
     "hero_title": "Stopi v stik.",
     "hero_subtitle": "Imaš vprašanje? Želiš sodelovati? Veseli bomo tvojega sporočila.",
+    "copy_email_success": "Kopirano",
     "info_email_label": "Email",
     "info_email_value": "info@genyxz.si",
     "info_location_label": "Lokacija",
@@ -529,6 +564,7 @@
     "terms": "Pogoji uporabe",
     "cookies": "Piškotki",
     "copyright": "© {{year}} GenYXZ. Vse pravice pridržane.",
+    "made_by": "Izdelal",
     "credit": "Osnutek — pripravlja ALM Flow"
   },
   "404": {

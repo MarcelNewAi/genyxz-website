@@ -3,6 +3,7 @@ import useScrollReveal from '../utils/useScrollReveal'
 import CustomScrollbar from './CustomScrollbar'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import PartnerStrip from './PartnerStrip'
 import ScrollToTop from './ScrollToTop'
 import StickyCTA from './StickyCTA'
 
@@ -19,6 +20,7 @@ export default function Layout({ children }) {
       <Navbar />
       <main className="site-main">{children}</main>
       {shouldRenderStickyCTA ? <StickyCTA key={location.pathname} /> : null}
+      <PartnerStrip />
       <Footer />
       <CustomScrollbar />
     </div>
