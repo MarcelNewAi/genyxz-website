@@ -1,5 +1,6 @@
 import FinalCTA from '../components/FinalCTA'
 import VizijaBlock from '../components/VizijaBlock'
+import renderPlumWords from '../utils/renderPlumWords'
 import useTranslation from '../utils/useTranslation'
 
 export default function ONas() {
@@ -25,28 +26,32 @@ export default function ONas() {
 
   return (
     <>
-      <section className="section-block section-bg page-hero onas-hero">
-        <div className="layout-container onas-hero-inner">
-          <p className="onas-eyebrow" data-reveal>
-            {t('onas.hero.label')}
-          </p>
-          <h1 className="onas-hero-heading" data-reveal data-reveal-delay="90">
-            {t('onas.hero.heading')}
-          </h1>
-          <p className="onas-hero-subtitle" data-reveal data-reveal-delay="150">
-            {t('onas.hero.subtitle')}
-          </p>
-          <div aria-hidden="true" className="divider-line onas-hero-divider" data-reveal data-reveal-delay="210" />
+      <section className="section-block section-bg page-hero onas-hero onas-hero-v2 inner-page-hero">
+        <div className="onas-hero-container">
+          <div className="onas-hero-grid">
+            <div aria-hidden="true" className="onas-hero-figure-wrap">
+              <img alt="" className="onas-hero-figure" decoding="async" src="/turtle-dna4-o-nas.svg" />
+            </div>
+
+            <div className="onas-hero-copy">
+              <div className="onas-hero-copy-inner">
+                <h1 className="onas-hero-heading" data-reveal data-reveal-delay="90">
+                  <span className="onas-hero-heading-lead">{t('onas.hero.headingLead')}</span>{' '}
+                  <span className="onas-hero-heading-accent">{t('onas.hero.headingAccent')}</span>
+                </h1>
+                <p className="onas-hero-subtitle" data-reveal data-reveal-delay="150">
+                  {t('onas.hero.subtitle')}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="section-block section-surface onas-kaj">
         <div className="layout-container">
-          <p className="onas-eyebrow" data-reveal>
-            {t('onas.kaj.label')}
-          </p>
           <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
-            {t('onas.kaj.heading')}
+            {renderPlumWords(t('onas.kaj.heading'))}
           </h2>
           <div className="onas-kaj-grid">
             <div className="onas-kaj-main">
@@ -74,9 +79,6 @@ export default function ONas() {
       <section className="section-block onas-zakaj">
         <div aria-hidden="true" className="onas-zakaj-glow" />
         <div className="layout-container onas-zakaj-inner">
-          <p className="onas-eyebrow onas-eyebrow-light" data-reveal>
-            {t('onas.zakaj.label')}
-          </p>
           <h2 className="onas-section-title onas-section-title-light" data-reveal data-reveal-delay="90">
             {t('onas.zakaj.heading')}
           </h2>
@@ -104,11 +106,8 @@ export default function ONas() {
       <section className="section-block section-bg onas-simbol">
         <div className="layout-container onas-simbol-grid">
           <div className="onas-simbol-copy">
-            <p className="onas-eyebrow" data-reveal>
-              {t('onas.simbol.label')}
-            </p>
             <h2 className="onas-section-title" data-reveal data-reveal-delay="80">
-              {t('onas.simbol.heading')}
+              {renderPlumWords(t('onas.simbol.heading'))}
             </h2>
             <p className="onas-body" data-reveal data-reveal-delay="150">
               {t('onas.simbol.body')}

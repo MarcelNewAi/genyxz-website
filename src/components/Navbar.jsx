@@ -9,9 +9,18 @@ import navLinks from './navLinks'
 export default function Navbar() {
   const { t } = useTranslation()
   const location = useLocation()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [menuOpenPath, setMenuOpenPath] = useState(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const mobileOverlayRef = useRef(null)
+  const isMenuOpen = menuOpenPath === location.pathname
+
+  const closeMenu = () => {
+    setMenuOpenPath(null)
+  }
+
+  const toggleMenu = () => {
+    setMenuOpenPath((prev) => (prev === location.pathname ? null : location.pathname))
+  }
 
   useEffect(() => {
     const onScroll = () => {
@@ -25,10 +34,6 @@ export default function Navbar() {
       window.removeEventListener('scroll', onScroll)
     }
   }, [])
-
-  useEffect(() => {
-    setIsMenuOpen(false)
-  }, [location.pathname])
 
   useEffect(() => {
     const body = document.body
@@ -60,7 +65,7 @@ export default function Navbar() {
   useEffect(() => {
     const onKeyDown = (event) => {
       if (event.key === 'Escape') {
-        setIsMenuOpen(false)
+        closeMenu()
       }
     }
 
@@ -102,7 +107,7 @@ export default function Navbar() {
               aria-expanded={isMenuOpen}
               aria-label={t('site.title')}
               className={`navbar-hamburger ${isMenuOpen ? 'is-open' : ''}`}
-              onClick={() => setIsMenuOpen((prev) => !prev)}
+              onClick={toggleMenu}
               type="button"
             >
               {isMenuOpen ? <IconClose className="icon-sm" /> : <IconMenu className="icon-sm" />}
@@ -117,7 +122,7 @@ export default function Navbar() {
         ref={mobileOverlayRef}
         onClick={(event) => {
           if (event.target === event.currentTarget) {
-            setIsMenuOpen(false)
+            closeMenu()
           }
         }}
       >
@@ -128,7 +133,7 @@ export default function Navbar() {
                 className={({ isActive }) => `mobile-nav-link ${isActive ? 'is-active' : ''}`}
                 end={item.to === '/'}
                 key={item.to}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
                 style={{ transitionDelay: `${index * 40}ms` }}
                 to={item.to}
               >
@@ -140,7 +145,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <a className="btn btn-primary mobile-cta" href={AMBASSADOR_URL} onClick={() => setIsMenuOpen(false)}>
+          <a className="btn btn-primary mobile-cta" href={AMBASSADOR_URL} onClick={closeMenu}>
             {t('nav.cta')}
           </a>
         </div>

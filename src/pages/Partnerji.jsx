@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import FinalCTA from '../components/FinalCTA'
+import renderPlumWords from '../utils/renderPlumWords'
 import { PARTNER_LOGOS } from '../utils/constants'
 import useTranslation from '../utils/useTranslation'
 
@@ -56,29 +57,36 @@ export default function Partnerji() {
 
   return (
     <>
-      <section className="section-block section-bg page-hero partnerji-hero">
-        <div className="layout-container partnerji-hero-inner">
-          <p className="partnerji-eyebrow" data-reveal>
-            {t('partnerji.hero.label')}
-          </p>
-          <h1 className="partnerji-hero-heading" data-reveal data-reveal-delay="90">
-            {t('partnerji.hero.heading')}
-          </h1>
-          <p className="partnerji-hero-subtitle" data-reveal data-reveal-delay="160">
-            {t('partnerji.hero.subtitle')}
-          </p>
-          <div aria-hidden="true" className="partnerji-hero-divider" data-reveal data-reveal-delay="220" />
+      <section className="section-block section-bg page-hero partnerji-hero partnerji-hero-v2 inner-page-hero">
+        <div className="partnerji-hero-container">
+          <div className="partnerji-hero-grid">
+            <div aria-hidden="true" className="partnerji-hero-figure-wrap">
+              <img alt="" className="partnerji-hero-figure" decoding="async" src="/turtle-dna7-partnerji.svg" />
+            </div>
+
+            <div className="partnerji-hero-copy">
+              <div className="partnerji-hero-copy-inner">
+                <div className="partnerji-hero-main">
+                  <h1 className="partnerji-hero-heading" data-reveal data-reveal-delay="90">
+                    {renderPlumWords(t('partnerji.hero.heading'))}
+                  </h1>
+                </div>
+                <div className="partnerji-hero-support">
+                  <p className="partnerji-hero-subtitle" data-reveal data-reveal-delay="160">
+                    {t('partnerji.hero.subtitle')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="section-block section-surface partnerji-avtoriteta">
         <div className="layout-container partnerji-avtoriteta-grid">
           <div className="partnerji-avtoriteta-left">
-            <p className="partnerji-eyebrow" data-reveal>
-              {t('partnerji.avtoriteta.label')}
-            </p>
             <h2 className="partnerji-section-title" data-reveal data-reveal-delay="80">
-              {t('partnerji.avtoriteta.heading')}
+              {renderPlumWords(t('partnerji.avtoriteta.heading'))}
             </h2>
           </div>
 
@@ -96,11 +104,8 @@ export default function Partnerji() {
 
       <section className="section-block section-bg partnerji-grid">
         <div className="layout-container partnerji-grid-inner">
-          <p className="partnerji-eyebrow" data-reveal>
-            {t('partnerji.grid.label')}
-          </p>
           <h2 className="partnerji-section-title" data-reveal data-reveal-delay="90">
-            {t('partnerji.grid.heading')}
+            {renderPlumWords(t('partnerji.grid.heading'))}
           </h2>
 
           <div className="partnerji-logo-matrix">
@@ -114,9 +119,6 @@ export default function Partnerji() {
       <section className="section-block partnerji-stebri">
         <div aria-hidden="true" className="partnerji-stebri-glow" />
         <div className="layout-container partnerji-stebri-inner">
-          <p className="partnerji-eyebrow partnerji-eyebrow-light" data-reveal>
-            {t('partnerji.stebri.label')}
-          </p>
           <h2 className="partnerji-section-title partnerji-section-title-light" data-reveal data-reveal-delay="90">
             {t('partnerji.stebri.heading')}
           </h2>
@@ -140,14 +142,11 @@ export default function Partnerji() {
       <section className="section-block section-surface partnerji-povezava">
         <div className="layout-container partnerji-povezava-inner">
           <div aria-hidden="true" className="partnerji-povezava-divider" data-reveal />
-          <p className="partnerji-eyebrow" data-reveal data-reveal-delay="70">
-            {t('partnerji.povezava.label')}
-          </p>
           <p className="partnerji-povezava-body" data-reveal data-reveal-delay="130">
             {t('partnerji.povezava.body')}
           </p>
           <p className="partnerji-povezava-statement" data-reveal data-reveal-delay="180">
-            {t('partnerji.povezava.statement')}
+            {renderPlumWords(t('partnerji.povezava.statement'))}
           </p>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import FinalCTA from '../components/FinalCTA'
 import { AMBASSADOR_URL } from '../utils/constants'
+import renderPlumWords from '../utils/renderPlumWords'
 import useTranslation from '../utils/useTranslation'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -74,39 +75,44 @@ export default function Kontakt() {
 
   return (
     <>
-      <section className="section-block section-bg page-hero kontakt-hero">
-        <div className="layout-container kontakt-hero-inner">
-          <p className="kontakt-eyebrow" data-reveal>
-            {t('kontakt.hero.label')}
-          </p>
-          <h1 className="kontakt-hero-heading" data-reveal data-reveal-delay="90">
-            {t('kontakt.hero.heading')}
-          </h1>
-          <p className="kontakt-hero-subtitle" data-reveal data-reveal-delay="160">
-            {t('kontakt.hero.subtitle')}
-          </p>
-          <div aria-hidden="true" className="kontakt-hero-divider" data-reveal data-reveal-delay="220" />
+      <section className="section-block section-bg page-hero kontakt-hero inner-page-hero">
+        <div className="kontakt-hero-container">
+          <div className="kontakt-hero-grid">
+            <div aria-hidden="true" className="kontakt-hero-figure-wrap">
+              <img alt="" className="kontakt-hero-figure" decoding="async" src="/turtle-dna8-kontakt.svg" />
+            </div>
+
+            <div className="kontakt-hero-copy">
+              <div className="kontakt-hero-copy-inner">
+                <div className="kontakt-hero-main">
+                  <h1 className="kontakt-hero-heading" data-reveal data-reveal-delay="90">
+                    {renderPlumWords(t('kontakt.hero.heading'))}
+                  </h1>
+                </div>
+                <div className="kontakt-hero-support">
+                  <p className="kontakt-hero-subtitle" data-reveal data-reveal-delay="160">
+                    {t('kontakt.hero.subtitle')}
+                  </p>
+                  <div aria-hidden="true" className="kontakt-hero-divider" data-reveal data-reveal-delay="220" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="section-block section-surface kontakt-details">
         <div className="layout-container kontakt-details-grid">
           <div className="kontakt-details-intro">
-            <p className="kontakt-eyebrow" data-reveal>
-              {t('kontakt.details.introLabel')}
-            </p>
             <p className="kontakt-details-body" data-reveal data-reveal-delay="100">
               {t('kontakt.details.intro')}
             </p>
             <p className="kontakt-details-statement" data-reveal data-reveal-delay="170">
-              {t('kontakt.details.statement')}
+              {renderPlumWords(t('kontakt.details.statement'))}
             </p>
           </div>
 
           <div className="kontakt-details-list-wrap">
-            <p className="kontakt-eyebrow" data-reveal>
-              {t('kontakt.details.listLabel')}
-            </p>
             <ul className="kontakt-details-list">
               <li className="kontakt-details-item" data-reveal data-reveal-delay="120">
                 <p className="kontakt-details-item-label">{t('kontakt.details.items.email.label')}</p>
@@ -131,11 +137,8 @@ export default function Kontakt() {
 
       <section className="section-block section-bg kontakt-form-section">
         <div className="layout-container kontakt-form-inner">
-          <p className="kontakt-eyebrow" data-reveal>
-            {t('kontakt.form.label')}
-          </p>
           <h2 className="kontakt-section-title" data-reveal data-reveal-delay="90">
-            {t('kontakt.form.heading')}
+            {renderPlumWords(t('kontakt.form.heading'))}
           </h2>
 
           {isSubmitted ? (
@@ -236,9 +239,6 @@ export default function Kontakt() {
       <section className="section-block section-surface kontakt-prehod">
         <div className="layout-container kontakt-prehod-inner">
           <div aria-hidden="true" className="kontakt-prehod-divider" data-reveal />
-          <p className="kontakt-eyebrow" data-reveal data-reveal-delay="70">
-            {t('kontakt.prehod.label')}
-          </p>
           <p className="kontakt-prehod-body" data-reveal data-reveal-delay="140">
             {t('kontakt.prehod.body')}{' '}
             <a className="kontakt-editorial-link" href={AMBASSADOR_URL}>
