@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { ArrowLeftRight, BookOpen, Link as LinkIcon, MessageCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import FinalCTA from '../components/FinalCTA'
@@ -96,10 +96,10 @@ export default function KajDelamo() {
 
       <section className="section-block section-surface kajdelamo-delamo">
         <div className="layout-container kajdelamo-delamo-header">
-          <p className="kajdelamo-delamo-label" data-reveal data-reveal-delay="70">
+          <p className="kajdelamo-delamo-label">
             {t('kajdelamo.delamo.label')}
           </p>
-          <h2 className="kajdelamo-section-title" data-reveal data-reveal-delay="110">
+          <h2 className="kajdelamo-section-title">
             {renderPlumWords(t('kajdelamo.delamo.heading'))}
           </h2>
           <div aria-hidden="true" className="kajdelamo-delamo-divider" data-reveal data-reveal-delay="170" />
@@ -135,7 +135,7 @@ export default function KajDelamo() {
       <section className="section-block kajdelamo-praksa">
         <div aria-hidden="true" className="kajdelamo-praksa-glow" />
         <div className="layout-container kajdelamo-praksa-inner">
-          <h2 className="kajdelamo-section-title kajdelamo-section-title-light" data-reveal data-reveal-delay="90">
+          <h2 className="kajdelamo-section-title kajdelamo-section-title-light kajdelamo-praksa-title">
             {t('kajdelamo.praksa.heading')}
           </h2>
 
@@ -157,19 +157,25 @@ export default function KajDelamo() {
 
       <section className="section-block section-surface kajdelamo-prehod">
         <div className="layout-container kajdelamo-prehod-inner">
-          <div aria-hidden="true" className="kajdelamo-prehod-divider" data-reveal />
-          <p className="kajdelamo-prehod-body" data-reveal data-reveal-delay="130">
+          <p className="kajdelamo-prehod-label">
+            PREHOD V PRAKSO
+          </p>
+          <h2 className="kajdelamo-prehod-heading">
+            Kjer se srečata znanje in okolje.
+          </h2>
+          <div aria-hidden="true" className="kajdelamo-prehod-heading-divider" />
+          <p className="kajdelamo-prehod-body">
             {t('kajdelamo.prehod.body')}
           </p>
-          <p className="kajdelamo-prehod-statement" data-reveal data-reveal-delay="180">
+          <p className="kajdelamo-prehod-statement">
             {renderPlumWords(t('kajdelamo.prehod.statement'))}
           </p>
-          <p data-reveal data-reveal-delay="220">
+          <p>
             <Link className="kajdelamo-prehod-link" to="/partnerji">
               {t('kajdelamo.prehod.link')}
             </Link>
           </p>
-          <div aria-hidden="true" className="kajdelamo-prehod-divider" data-reveal data-reveal-delay="260" />
+          <div aria-hidden="true" className="kajdelamo-prehod-divider" />
         </div>
       </section>
 
@@ -177,3 +183,4 @@ export default function KajDelamo() {
     </>
   )
 }
+

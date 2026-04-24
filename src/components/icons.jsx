@@ -52,32 +52,25 @@ export function IconClose({ className = '' }) {
 
 export function IconInstagram({ className = '' }) {
   return (
-    <IconBase className={className}>
-      <rect height="14" rx="4" width="14" x="5" y="5" />
-      <circle cx="12" cy="12" r="3.2" />
-      <circle cx="16.5" cy="7.5" r="0.8" />
-    </IconBase>
+    <svg aria-hidden="true" className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9zm10.1 1.5a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4z" />
+    </svg>
   )
 }
 
 export function IconLinkedIn({ className = '' }) {
   return (
-    <IconBase className={className}>
-      <rect height="14" rx="3" width="14" x="5" y="5" />
-      <path d="M9 10v6" />
-      <circle cx="9" cy="8.2" r="0.9" />
-      <path d="M12.5 16v-3.1a2.1 2.1 0 0 1 4.2 0V16" />
-      <path d="M12.5 10v6" />
-    </IconBase>
+    <svg aria-hidden="true" className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M5.9 3h12.2A2.9 2.9 0 0 1 21 5.9v12.2a2.9 2.9 0 0 1-2.9 2.9H5.9A2.9 2.9 0 0 1 3 18.1V5.9A2.9 2.9 0 0 1 5.9 3zM8.2 10.2h2.1v7H8.2v-7zm1-3.5a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6zm2.7 3.5h2v1a3 3 0 0 1 2.8-1.2c2 0 3.3 1.3 3.3 4v3.8H18v-3.6c0-1.4-.5-2.3-1.8-2.3-1 0-1.6.7-1.8 1.4-.1.2-.1.5-.1.8v3.7h-2.1v-7z" />
+    </svg>
   )
 }
 
 export function IconYoutube({ className = '' }) {
   return (
-    <IconBase className={className}>
-      <rect height="10" rx="3" width="16" x="4" y="7" />
-      <path d="m11 10 4 2-4 2z" />
-    </IconBase>
+    <svg aria-hidden="true" className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M21.6 8.3a2.8 2.8 0 0 0-2-2C17.9 5.8 12 5.8 12 5.8s-5.9 0-7.6.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 3.7 2.8 2.8 0 0 0 2 2c1.7.5 7.6.5 7.6.5s5.9 0 7.6-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-3.7zM10.1 15.2V8.8l5.4 3.2-5.4 3.2z" />
+    </svg>
   )
 }
 
