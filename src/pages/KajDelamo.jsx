@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react'
+import { ArrowLeftRight, BookOpen, Link as LinkIcon, MessageCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import FinalCTA from '../components/FinalCTA'
 import renderPlumWords from '../utils/renderPlumWords'
@@ -5,9 +7,17 @@ import useTranslation from '../utils/useTranslation'
 
 export default function KajDelamo() {
   const { t } = useTranslation()
+  const quadrantGridRef = useRef(null)
+  const [quadrantsVisible, setQuadrantsVisible] = useState(false)
 
   const activityKeys = ['one', 'two', 'three', 'four']
   const scenarioKeys = ['one', 'two', 'three']
+  const iconByKey = {
+    one: BookOpen,
+    two: MessageCircle,
+    three: LinkIcon,
+    four: ArrowLeftRight,
+  }
 
   const activities = activityKeys.map((key) => ({
     id: key,
@@ -21,6 +31,47 @@ export default function KajDelamo() {
     title: t(`kajdelamo.praksa.scenarios.${key}.title`),
     body: t(`kajdelamo.praksa.scenarios.${key}.body`),
   }))
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined
+    }
+
+    const gridNode = quadrantGridRef.current
+
+    if (!gridNode) {
+      return undefined
+    }
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReducedMotion) {
+      setQuadrantsVisible(true)
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return
+          }
+
+          setQuadrantsVisible(true)
+          observer.disconnect()
+        })
+      },
+      {
+        threshold: 0.15,
+      },
+    )
+
+    observer.observe(gridNode)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
 
   return (
     <>
@@ -44,28 +95,39 @@ export default function KajDelamo() {
       </section>
 
       <section className="section-block section-surface kajdelamo-delamo">
-        <div className="layout-container kajdelamo-delamo-inner">
-          <h2 className="kajdelamo-section-title" data-reveal data-reveal-delay="90">
+        <div className="layout-container kajdelamo-delamo-header">
+          <p className="kajdelamo-delamo-label" data-reveal data-reveal-delay="70">
+            {t('kajdelamo.delamo.label')}
+          </p>
+          <h2 className="kajdelamo-section-title" data-reveal data-reveal-delay="110">
             {renderPlumWords(t('kajdelamo.delamo.heading'))}
           </h2>
+          <div aria-hidden="true" className="kajdelamo-delamo-divider" data-reveal data-reveal-delay="170" />
+        </div>
 
-          <div className="kajdelamo-activity-rows">
-            {activities.map((item, index) => (
-              <article className="kajdelamo-activity-row" data-reveal data-reveal-delay={140 + index * 80} key={item.id}>
-                <p aria-hidden="true" className="kajdelamo-activity-number">
-                  {item.number}
-                </p>
-                <div className="kajdelamo-activity-copy">
-                  <h3 className="kajdelamo-activity-heading">{item.heading}</h3>
-                  <p className="kajdelamo-activity-body">{item.body}</p>
+        <div className="kajdelamo-quadrant-shell">
+          <div className="kajdelamo-quadrant-grid" ref={quadrantGridRef}>
+            {activities.map((item) => {
+              const Icon = iconByKey[item.id]
+
+              return (
+              <article
+                className={`kajdelamo-quadrant-cell kajdelamo-quadrant-cell-${item.id}${quadrantsVisible ? ' visible' : ''}`}
+                key={item.id}
+              >
+                <div className="kajdelamo-quadrant-content">
+                  <span aria-hidden="true" className="kajdelamo-quadrant-icon-wrap">
+                    <Icon className="kajdelamo-quadrant-icon" color="#43D1AB" size={36} strokeWidth={1.5} />
+                  </span>
+                  <p aria-hidden="true" className="kajdelamo-quadrant-number">
+                    {item.number}
+                  </p>
+                  <h3 className="kajdelamo-quadrant-heading">{item.heading}</h3>
+                  <p className="kajdelamo-quadrant-body">{item.body}</p>
                 </div>
               </article>
-            ))}
-          </div>
-
-          <div className="kajdelamo-delamo-closer-wrap" data-reveal data-reveal-delay="470">
-            <div aria-hidden="true" className="kajdelamo-delamo-closer-line" />
-            <p className="kajdelamo-delamo-closer">{t('kajdelamo.delamo.closer')}</p>
+              )
+            })}
           </div>
         </div>
       </section>

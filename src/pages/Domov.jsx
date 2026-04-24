@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import FinalCTA from '../components/FinalCTA'
 import VizijaBlock from '../components/VizijaBlock'
-import { AMBASSADOR_URL, PARTNER_LOGOS } from '../utils/constants'
+import { AMBASSADOR_URL } from '../utils/constants'
 import useTranslation from '../utils/useTranslation'
 
 function renderGradientWord(title) {
@@ -30,6 +30,24 @@ function renderGradientWord(title) {
 
 export default function Domov() {
   const { t } = useTranslation()
+  const bridgeBody = t('domov.bridge.body').trim()
+  const [leadRaw, restRaw] = bridgeBody.split(/\s[–-]\s/, 2)
+  const leadIn = leadRaw ? `${leadRaw}${/[.!?]$/.test(leadRaw) ? '' : '.'}` : bridgeBody
+  const followUpSource = restRaw ? `Ampak ${restRaw}` : ''
+  const followUpLines = followUpSource
+    ? (() => {
+        const firstCommaIndex = followUpSource.indexOf(',')
+
+        if (firstCommaIndex === -1) {
+          return [followUpSource]
+        }
+
+        return [
+          followUpSource.slice(0, firstCommaIndex + 1).trim(),
+          followUpSource.slice(firstCommaIndex + 1).trim(),
+        ].filter(Boolean)
+      })()
+    : []
 
   const teaserCards = [
     { to: '/o-nas', key: 'onas', variant: 'feature' },
@@ -72,13 +90,25 @@ export default function Domov() {
 
       <section className="section-block section-surface domov-bridge">
         <div className="layout-container domov-bridge-inner">
-          <p className="domov-bridge-label" data-reveal>
-            {t('domov.bridge.label')}
-          </p>
-          <p className="domov-bridge-body" data-reveal data-reveal-delay="90">
-            {t('domov.bridge.body')}
-          </p>
-          <div aria-hidden="true" className="divider-line domov-bridge-divider" data-reveal data-reveal-delay="130" />
+          <div className="domov-bridge-heading-wrap" data-reveal>
+            <h2 className="domov-bridge-heading">Zakaj GenYXZ?</h2>
+          </div>
+          <div aria-hidden="true" className="domov-bridge-column-separator" data-reveal data-reveal-delay="70" />
+          <div className="domov-bridge-copy" data-reveal data-reveal-delay="90">
+            <p className="domov-bridge-lead">{leadIn}</p>
+            <div aria-hidden="true" className="domov-bridge-copy-divider" />
+            <div className="domov-bridge-followup">
+              {followUpLines.length > 0 ? (
+                followUpLines.map((line, index) => (
+                  <p className="domov-bridge-body" key={`${line}-${index}`}>
+                    {line}
+                  </p>
+                ))
+              ) : (
+                <p className="domov-bridge-body">{bridgeBody}</p>
+              )}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -114,27 +144,6 @@ export default function Domov() {
                   </svg>
                 </span>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-block section-surface domov-trust-strip">
-        <div className="layout-container domov-trust-inner">
-          <p className="domov-trust-label" data-reveal>
-            {t('domov.partners_label')}
-          </p>
-          <div className="logo-grid domov-trust-logos">
-            {PARTNER_LOGOS.map((partner, index) => (
-              <div className="logo-box logo-box-brand" data-reveal data-reveal-delay={140 + index * 45} key={partner.id}>
-                <img
-                  alt={t(partner.nameKey)}
-                  className={`partner-logo ${partner.sizeClass}`}
-                  decoding="async"
-                  loading="lazy"
-                  src={partner.src}
-                />
-              </div>
             ))}
           </div>
         </div>

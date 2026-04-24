@@ -13,9 +13,11 @@ export default function StickyCTA() {
     }
 
     const heroSection = document.querySelector('.page-hero')
+    const partnerStrip = document.querySelector('.global-partner-strip')
     const footer = document.querySelector('footer.site-footer')
+    const bottomStopTarget = partnerStrip ?? footer
 
-    if (!heroSection || !footer) {
+    if (!heroSection || !bottomStopTarget) {
       return undefined
     }
 
@@ -39,7 +41,7 @@ export default function StickyCTA() {
     )
 
     heroObserver.observe(heroSection)
-    footerObserver.observe(footer)
+    footerObserver.observe(bottomStopTarget)
 
     return () => {
       heroObserver.disconnect()

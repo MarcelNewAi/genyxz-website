@@ -203,7 +203,7 @@
       "subtitle": "Ne gre za klasično promocijo. Gre za razumevanje in prenos znanja."
     },
     "delamo": {
-      "label": "Naše delovanje",
+      "label": "NAŠE DELO",
       "heading": "Štirje stebri našega dela.",
       "blocks": {
         "one": {
@@ -214,7 +214,7 @@
         "two": {
           "number": "02",
           "heading": "Organiziramo pogovore in dogodke",
-          "body": "Manjši dogodki, predstavitve, neformalna srečanja. Kjer se ljudje lahko vprašajo, ne da bi se počutili neumno."
+          "body": "Majhni dogodki, predstavitve, neformalna srečanja. Kjer se ljudje lahko vprašajo, ne da bi se počutili neumno."
         },
         "three": {
           "number": "03",
@@ -223,8 +223,8 @@
         },
         "four": {
           "number": "04",
-          "heading": "Gradimo skupnosti v lokalnem okolju",
-          "body": "Skupnost ni abstrakcija. Je ljudje, ki se poznajo, zaupajo drug drugemu in skupaj rastejo."
+          "heading": "Gradimo mostove med stroko in vsakdanom",
+          "body": "Sodobna medicina ponuja izjemne možnosti — a le, če ljudje vedo, da obstajajo. Mi poskrbimo, da izvedo."
         }
       },
       "closer": "Ne gre za klasično promocijo. Gre za razumevanje in prenos znanja."
