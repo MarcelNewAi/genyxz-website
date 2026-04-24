@@ -2156,7 +2156,7 @@
 
   .partnerji-hero-figure {
     display: block;
-    width: clamp(741px, 74.1vw, 1086px);
+    width: clamp(900px, 88vw, 1380px);
     height: auto;
     transform: translateX(40px);
   }
@@ -3451,7 +3451,11 @@
     min-height: calc(75vh - 24px);
   }
 
-  .partnerji-hero-figure,
+  .partnerji-hero-figure {
+    width: clamp(820px, 88vw, 1280px);
+    transform: translateX(24px);
+  }
+
   .kontakt-hero-figure {
     width: clamp(676px, 75.4vw, 1027px);
     transform: translateX(24px);
@@ -3520,7 +3524,11 @@
     padding-left: clamp(0.8rem, 2vw, 1.6rem);
   }
 
-  .partnerji-hero-figure,
+  .partnerji-hero-figure {
+    width: clamp(700px, 84vw, 1120px);
+    transform: translateX(12px);
+  }
+
   .kontakt-hero-figure {
     width: clamp(585px, 72.8vw, 884px);
     transform: translateX(12px);
@@ -4207,5 +4215,78 @@
     animation: none !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    scroll-behavior: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+.custom-scrollbar {
+  position: fixed;
+  top: 0;
+  right: 3px;
+  width: 9px;
+  height: 100vh;
+  z-index: 30;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+.custom-scrollbar.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.custom-scrollbar-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(216, 226, 238, 0.16);
+}
+
+.custom-scrollbar-thumb {
+  position: absolute;
+  left: 0;
+  padding: 0;
+  width: 9px;
+  border: 0;
+  border-radius: 999px;
+  appearance: none;
+  background: #582a71;
+  box-shadow: 0 8px 18px rgba(88, 42, 113, 0.25);
+  cursor: grab;
+  touch-action: none;
+  transform-origin: center;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.custom-scrollbar-thumb:hover {
+  background: #43d1ab;
+  transform: scale(1.06);
+}
+
+.custom-scrollbar.is-dragging .custom-scrollbar-thumb {
+  background: #43d1ab;
+  cursor: grabbing;
+  transform: scale(1.08);
+}
+
+@media (max-width: 767px) {
+  .custom-scrollbar {
+    display: none;
   }
 }

@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import useScrollReveal from '../utils/useScrollReveal'
+import CustomScrollbar from './CustomScrollbar'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import ScrollToTop from './ScrollToTop'
@@ -19,6 +20,7 @@ export default function Layout({ children }) {
       <main className="site-main">{children}</main>
       {shouldRenderStickyCTA ? <StickyCTA key={location.pathname} /> : null}
       <Footer />
+      <CustomScrollbar />
     </div>
   )
 }
