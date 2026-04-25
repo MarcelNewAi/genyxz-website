@@ -86,7 +86,7 @@ export default function Kontakt() {
             <div className="kontakt-hero-copy">
               <div className="kontakt-hero-copy-inner">
                 <div className="kontakt-hero-main">
-                  <h1 className="kontakt-hero-heading" data-reveal data-reveal-delay="90">
+                  <h1 className="kontakt-hero-heading">
                     {renderPlumWords(t('kontakt.hero.heading'))}
                   </h1>
                 </div>
@@ -135,7 +135,7 @@ export default function Kontakt() {
               </li>
               <li className="kontakt-details-item" data-reveal data-reveal-delay="240">
                 <p className="kontakt-details-item-label">{t('kontakt.details.items.ambasadorji.label')}</p>
-                <a className="kontakt-editorial-link" href={AMBASSADOR_URL}>
+                <a className="kontakt-editorial-link" href={AMBASSADOR_URL} rel="noopener noreferrer" target="_blank">
                   {t('kontakt.details.items.ambasadorji.value')}
                 </a>
               </li>

@@ -25,7 +25,7 @@ export default function Ambasadorji() {
         <div className="layout-container ambasadorji-hero-inner">
           <div className="ambasadorji-hero-copy">
             <div className="ambasadorji-hero-main">
-              <h1 className="ambasadorji-hero-heading" data-reveal data-reveal-delay="90">
+              <h1 className="ambasadorji-hero-heading">
                 {t('ambasadorji.hero.heading')}
               </h1>
             </div>

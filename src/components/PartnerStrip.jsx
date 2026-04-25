@@ -10,8 +10,10 @@ const PARTNER_STRIP_LOGOS = [
 const PARTNER_STRIP_TRACK = [...PARTNER_STRIP_LOGOS, ...PARTNER_STRIP_LOGOS, ...PARTNER_STRIP_LOGOS]
 
 export default function PartnerStrip() {
+  const { t } = useTranslation()
+
   return (
-    <section aria-label="Nasi partnerji" className="global-partner-strip">
+    <section aria-label={t('partnerji.logos_label')} className="global-partner-strip">
       <ul className="partner-strip-track">
         {PARTNER_STRIP_TRACK.map((partner, index) => (
           <li className="partner-strip-item" key={`${partner.id}-${index}`} style={{ backgroundColor: partner.bg }}>
@@ -22,3 +24,4 @@ export default function PartnerStrip() {
     </section>
   )
 }
+import useTranslation from '../utils/useTranslation'
