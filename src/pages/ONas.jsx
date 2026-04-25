@@ -35,7 +35,7 @@ export default function ONas() {
 
             <div className="onas-hero-copy">
               <div className="onas-hero-copy-inner">
-                <h1 className="onas-hero-heading" data-reveal data-reveal-delay="90">
+                <h1 className="onas-hero-heading">
                   <span className="onas-hero-heading-lead">{t('onas.hero.headingLead')}</span>{' '}
                   <span className="onas-hero-heading-accent">{t('onas.hero.headingAccent')}</span>
                 </h1>

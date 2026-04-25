@@ -59,6 +59,8 @@ export default function StickyCTA() {
           aria-label={t('sticky.aria_label')}
           className="btn btn-primary sticky-cta-button"
           href={AMBASSADOR_URL}
+          rel="noopener noreferrer"
+          target="_blank"
         >
           {t('sticky.cta')}
         </a>

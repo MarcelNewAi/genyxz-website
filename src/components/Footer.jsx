@@ -58,19 +58,19 @@ export default function Footer() {
             <p className="footer-heading">{t('footer.legal_heading')}</p>
             <ul className="footer-list">
               <li>
-                <a className="footer-link" href="#">
+                <Link className="footer-link" to="/politika-zasebnosti">
                   {t('footer.privacy')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="footer-link" href="#">
+                <Link className="footer-link" to="/pogoji-uporabe">
                   {t('footer.terms')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="footer-link" href="#">
+                <Link className="footer-link" to="/piskotki">
                   {t('footer.cookies')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -45,7 +45,13 @@ function getScrollMetrics(trackHeight) {
 }
 
 export default function CustomScrollbar() {
-  const [isDesktop, setIsDesktop] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(() => {
+    if (typeof window === 'undefined') {
+      return false
+    }
+
+    return window.matchMedia(DESKTOP_MEDIA_QUERY).matches
+  })
   const [isScrollable, setIsScrollable] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
   const [thumb, setThumb] = useState({ height: MIN_THUMB_HEIGHT, top: 0 })
@@ -86,13 +92,16 @@ export default function CustomScrollbar() {
   }, [syncMetrics])
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined
+    }
+
     const mediaQuery = window.matchMedia(DESKTOP_MEDIA_QUERY)
 
     const handleMediaChange = (event) => {
       setIsDesktop(event.matches)
     }
 
-    setIsDesktop(mediaQuery.matches)
     mediaQuery.addEventListener('change', handleMediaChange)
 
     return () => {
@@ -102,7 +111,6 @@ export default function CustomScrollbar() {
 
   useEffect(() => {
     if (!isDesktop) {
-      setIsScrollable(false)
       return undefined
     }
 
@@ -150,6 +158,8 @@ export default function CustomScrollbar() {
       }
     }
   }, [isDesktop, scheduleSync])
+
+  const showScrollbar = isDesktop && isScrollable
 
   useEffect(() => {
     if (!isDragging) {
@@ -235,7 +245,7 @@ export default function CustomScrollbar() {
   }
 
   return (
-    <div className={`custom-scrollbar${isScrollable ? ' is-visible' : ''}${isDragging ? ' is-dragging' : ''}`} aria-hidden="true">
+    <div className={`custom-scrollbar${showScrollbar ? ' is-visible' : ''}${isDragging ? ' is-dragging' : ''}`} aria-hidden="true">
       <div className="custom-scrollbar-track" ref={trackRef} />
       <button
         className="custom-scrollbar-thumb"

@@ -98,7 +98,7 @@ export default function Navbar() {
           </nav>
 
           <div className="navbar-actions">
-            <a className="btn btn-primary navbar-cta" href={AMBASSADOR_URL}>
+            <a className="btn btn-primary navbar-cta" href={AMBASSADOR_URL} rel="noopener noreferrer" target="_blank">
               {t('nav.cta')}
             </a>
 
@@ -145,7 +145,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <a className="btn btn-primary mobile-cta" href={AMBASSADOR_URL} onClick={closeMenu}>
+          <a className="btn btn-primary mobile-cta" href={AMBASSADOR_URL} onClick={closeMenu} rel="noopener noreferrer" target="_blank">
             {t('nav.cta')}
           </a>
         </div>

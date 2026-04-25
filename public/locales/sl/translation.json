@@ -39,6 +39,8 @@
     "cta_secondary": "Preberi več",
     "bridge": {
       "label": "GenYXZ",
+      "heading": "Zakaj GenYXZ?",
+      "followup_prefix": "Ampak",
       "body": "Skupnost ljudi, ki razumejo, da prihodnost zdravja ne temelji samo na zdravljenju bolezni – ampak na razumevanju telesa, preventive in pravih odločitev ob pravem času."
     },
     "teasers": {
@@ -252,6 +254,8 @@
       "closer": "Znanje vedno povezujemo s prakso."
     },
     "prehod": {
+      "eyebrow": "PREHOD V PRAKSO",
+      "heading": "Kjer se srečata znanje in okolje.",
       "label": "Okolje",
       "body": "Delujemo v okolju, kjer se stikajo preventiva, sodobna medicina in dolgoročna zaščita. Sodelujemo z organizacijami, ki oblikujejo prihodnost zdravja — in to znanje približujemo ljudem.",
       "statement": "Naši partnerji so v svetovnem vrhu preventivnih in zdravstvenih rešitev.",

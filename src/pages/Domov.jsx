@@ -33,7 +33,7 @@ export default function Domov() {
   const bridgeBody = t('domov.bridge.body').trim()
   const [leadRaw, restRaw] = bridgeBody.split(/\s[–-]\s/, 2)
   const leadIn = leadRaw ? `${leadRaw}${/[.!?]$/.test(leadRaw) ? '' : '.'}` : bridgeBody
-  const followUpSource = restRaw ? `Ampak ${restRaw}` : ''
+  const followUpSource = restRaw ? `${t('domov.bridge.followup_prefix')} ${restRaw}` : ''
   const followUpLines = followUpSource
     ? (() => {
         const firstCommaIndex = followUpSource.indexOf(',')
@@ -67,7 +67,7 @@ export default function Domov() {
             <p className="section-context" data-reveal data-reveal-delay="80">
               {t('domov.hero_label')}
             </p>
-            <h1 className="section-title" data-reveal data-reveal-delay="140">
+            <h1 className="section-title">
               {renderGradientWord(t('domov.hero_title'))}
             </h1>
             <p className="hero-subtitle" data-reveal data-reveal-delay="220">
@@ -76,8 +76,8 @@ export default function Domov() {
             <p className="hero-statement" data-reveal data-reveal-delay="250">
               {t('domov.hero.statement')}
             </p>
-            <div className="hero-actions" data-reveal data-reveal-delay="280">
-              <a className="btn btn-primary" href={AMBASSADOR_URL}>
+            <div className="hero-actions">
+              <a className="btn btn-primary" href={AMBASSADOR_URL} rel="noopener noreferrer" target="_blank">
                 {t('domov.cta_primary')}
               </a>
               <Link className="btn btn-outline" to="/o-nas">
@@ -91,7 +91,7 @@ export default function Domov() {
       <section className="section-block section-surface domov-bridge">
         <div className="layout-container domov-bridge-inner">
           <div className="domov-bridge-heading-wrap" data-reveal>
-            <h2 className="domov-bridge-heading">Zakaj GenYXZ?</h2>
+            <h2 className="domov-bridge-heading">{t('domov.bridge.heading')}</h2>
           </div>
           <div aria-hidden="true" className="domov-bridge-column-separator" data-reveal data-reveal-delay="70" />
           <div className="domov-bridge-copy" data-reveal data-reveal-delay="90">

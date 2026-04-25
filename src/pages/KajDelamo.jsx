@@ -8,7 +8,13 @@ import useTranslation from '../utils/useTranslation'
 export default function KajDelamo() {
   const { t } = useTranslation()
   const quadrantGridRef = useRef(null)
-  const [quadrantsVisible, setQuadrantsVisible] = useState(false)
+  const [quadrantsVisible, setQuadrantsVisible] = useState(() => {
+    if (typeof window === 'undefined') {
+      return false
+    }
+
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  })
 
   const activityKeys = ['one', 'two', 'three', 'four']
   const scenarioKeys = ['one', 'two', 'three']
@@ -46,7 +52,6 @@ export default function KajDelamo() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     if (prefersReducedMotion) {
-      setQuadrantsVisible(true)
       return undefined
     }
 
@@ -79,7 +84,7 @@ export default function KajDelamo() {
         <div className="layout-container kajdelamo-hero-inner">
           <div className="kajdelamo-hero-copy">
             <div className="kajdelamo-hero-main">
-              <h1 className="kajdelamo-hero-heading" data-reveal data-reveal-delay="90">
+              <h1 className="kajdelamo-hero-heading">
                 {renderPlumWords(t('kajdelamo.hero.heading'))}
               </h1>
             </div>
@@ -158,10 +163,10 @@ export default function KajDelamo() {
       <section className="section-block section-surface kajdelamo-prehod">
         <div className="layout-container kajdelamo-prehod-inner">
           <p className="kajdelamo-prehod-label">
-            PREHOD V PRAKSO
+            {t('kajdelamo.prehod.eyebrow')}
           </p>
           <h2 className="kajdelamo-prehod-heading">
-            Kjer se srečata znanje in okolje.
+            {t('kajdelamo.prehod.heading')}
           </h2>
           <div aria-hidden="true" className="kajdelamo-prehod-heading-divider" />
           <p className="kajdelamo-prehod-body">
