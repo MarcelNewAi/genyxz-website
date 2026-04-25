@@ -1096,9 +1096,9 @@
   }
 
   .onas-hero.onas-hero-v2 {
-    padding: 28px 0 0;
-    min-height: 75vh;
-    overflow: hidden;
+    padding: 5rem 0 0;
+    min-height: 92vh;
+    overflow: visible;
   }
 
   .onas-hero-container {
@@ -1109,7 +1109,7 @@
   .onas-hero-grid {
     display: grid;
     grid-template-columns: 45% 55%;
-    min-height: calc(75vh - 28px);
+    min-height: calc(92vh - 5rem);
     align-items: stretch;
     gap: 0;
   }
@@ -1125,9 +1125,9 @@
 
   .onas-hero-figure {
     display: block;
-    width: clamp(630px, 67vw, 1010px);
+    width: clamp(520px, 56vw, 820px);
     height: auto;
-    transform: translate(100px, 16.666%);
+    transform: translate(48px, 0);
   }
 
   .onas-hero-copy {
@@ -4229,17 +4229,17 @@
   }
 
   .onas-hero.onas-hero-v2 {
-    padding-top: 24px;
+    padding-top: 5rem;
   }
 
   .onas-hero-grid {
     grid-template-columns: 43% 57%;
-    min-height: calc(75vh - 24px);
+    min-height: calc(92vh - 5rem);
   }
 
   .onas-hero-figure {
-    width: clamp(560px, 63vw, 865px);
-    transform: translate(80px, 16.666%);
+    width: clamp(500px, 54vw, 760px);
+    transform: translate(36px, 0);
   }
 
   .onas-hero-copy-inner {
@@ -4327,12 +4327,12 @@
   }
 
   .onas-hero.onas-hero-v2 {
-    min-height: 75vh;
+    min-height: 90vh;
   }
 
   .onas-hero-grid {
     grid-template-columns: 40% 60%;
-    min-height: calc(75vh - 24px);
+    min-height: calc(90vh - 5rem);
   }
 
   .onas-hero-figure-wrap {
@@ -4340,8 +4340,8 @@
   }
 
   .onas-hero-figure {
-    width: clamp(470px, 58vw, 700px);
-    transform: translate(48px, 16.666%);
+    width: clamp(400px, 48vw, 560px);
+    transform: translate(24px, 0);
   }
 
   .onas-hero-heading {
@@ -4786,14 +4786,24 @@
   .onas-hero-grid {
     grid-template-columns: 1fr;
     min-height: auto;
+    gap: 1rem;
   }
 
   .onas-hero-figure-wrap {
-    display: none;
+    display: flex;
+    order: 2;
+    justify-content: flex-start;
+    padding-left: 0;
   }
 
   .onas-hero-copy {
+    order: 1;
     padding-block: 0;
+  }
+
+  .onas-hero-figure {
+    width: min(100%, 440px);
+    transform: none;
   }
 
   .onas-hero-copy-inner {
@@ -4822,21 +4832,32 @@
   .kontakt-hero-grid {
     grid-template-columns: 1fr;
     min-height: auto;
+    gap: 1rem;
   }
 
   .partnerji-hero-figure-wrap,
   .kontakt-hero-figure-wrap {
-    display: none;
+    display: flex;
+    order: 2;
+    justify-content: flex-start;
+    padding-left: 0;
   }
 
   .partnerji-hero-copy,
   .kontakt-hero-copy {
+    order: 1;
     padding-block: 0;
   }
 
   .partnerji-hero-copy-inner,
   .kontakt-hero-copy-inner {
     width: min(100%, 32rem);
+  }
+
+  .partnerji-hero-figure,
+  .kontakt-hero-figure {
+    width: min(100%, 440px);
+    transform: none;
   }
 
   .partnerji-slides-runway {
