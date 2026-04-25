@@ -517,11 +517,18 @@
     border-bottom: 1px solid rgba(216, 226, 238, 0.5);
     background: rgba(240, 244, 248, 0.85);
     backdrop-filter: blur(16px);
-    transition: background-color 220ms ease;
+    transition: all 300ms ease;
   }
 
   .site-navbar.is-scrolled {
     background: rgba(240, 244, 248, 0.95);
+  }
+
+  .site-navbar.is-transparent-home {
+    border-bottom-color: transparent;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .navbar-inner {
@@ -606,12 +613,13 @@
     display: none;
     position: relative;
     z-index: 120;
-    border: 1px solid var(--color-border);
+    border: 1.5px solid var(--color-border);
     background: color-mix(in srgb, var(--color-surface) 94%, white);
     color: var(--color-text-primary);
     width: 44px;
     height: 44px;
-    border-radius: 11px;
+    padding: 0.5rem;
+    border-radius: 12px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -627,6 +635,21 @@
     border-color: color-mix(in srgb, var(--color-primary) 64%, white);
     background: color-mix(in srgb, var(--color-primary) 12%, white);
     transform: rotate(90deg);
+  }
+
+  .site-navbar.is-transparent-home .navbar-hamburger {
+    border-color: rgba(255, 255, 255, 0.86);
+    background: transparent;
+    color: #ffffff;
+    box-shadow: none;
+  }
+
+  .site-navbar.is-transparent-home .navbar-hamburger:hover,
+  .site-navbar.is-transparent-home .navbar-hamburger.is-open {
+    border-color: #ffffff;
+    background: transparent;
+    color: #ffffff;
+    box-shadow: none;
   }
 
   .mobile-nav-overlay {
@@ -4765,6 +4788,68 @@
   .domov-hero-art,
   .inner-page-hero-art {
     display: none;
+  }
+
+  .domov-hero {
+    min-height: 100vh;
+    padding: 88px 0 72px;
+    background-color: #08162b;
+    background-image: url('/background.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .domov-hero .hero-grid {
+    grid-template-columns: 1fr;
+    min-height: 100%;
+    align-content: center;
+    gap: 1.25rem;
+  }
+
+  .domov-hero .hero-copy {
+    padding-block: 0;
+  }
+
+  .domov-hero .section-context,
+  .domov-hero .section-title,
+  .domov-hero .section-title span,
+  .domov-hero .plum-word-bold,
+  .domov-hero .hero-statement {
+    color: #ffffff;
+  }
+
+  .domov-hero .gradient-word {
+    background: none;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .domov-hero .hero-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .domov-hero .hero-actions {
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  .domov-hero .hero-actions .btn {
+    width: auto;
+    padding: 0.9rem 2rem;
+    border-radius: 10px;
+  }
+
+  .domov-hero .btn-outline {
+    border-color: rgba(255, 255, 255, 0.86);
+    color: #ffffff;
+    background: transparent;
+  }
+
+  .domov-hero .btn-outline:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .ambasadorji-hero,
