@@ -10,9 +10,11 @@ export default function Navbar() {
   const { t } = useTranslation()
   const location = useLocation()
   const [menuOpenPath, setMenuOpenPath] = useState(null)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(() => (typeof window === 'undefined' ? false : window.scrollY > 0))
+  const [isMobile, setIsMobile] = useState(() => (typeof window === 'undefined' ? false : window.innerWidth < 768))
   const mobileOverlayRef = useRef(null)
   const isMenuOpen = menuOpenPath === location.pathname
+  const isTransparentHomeNavbar = isMobile && location.pathname === '/' && !isScrolled && !isMenuOpen
 
   const closeMenu = () => {
     setMenuOpenPath(null)
@@ -23,8 +25,29 @@ export default function Navbar() {
   }
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined
+    }
+
+    const onResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    onResize()
+    window.addEventListener('resize', onResize)
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined
+    }
+
     const onScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 0)
     }
 
     onScroll()
@@ -78,10 +101,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`site-navbar ${isScrolled ? 'is-scrolled' : ''}`}>
+      <header className={`site-navbar ${isScrolled ? 'is-scrolled' : ''} ${isTransparentHomeNavbar ? 'is-transparent-home' : ''}`.trim()}>
         <div className="navbar-inner">
           <Link aria-label={t('site.title')} className="navbar-logo" to="/">
-            <BrandWordmark />
+            <BrandWordmark src={isTransparentHomeNavbar ? '/Logo-bel.svg' : '/locales/sl/images/Logo.svg'} />
           </Link>
 
           <nav aria-label={t('site.title')} className="navbar-center">

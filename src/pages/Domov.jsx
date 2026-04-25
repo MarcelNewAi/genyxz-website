@@ -4,10 +4,18 @@ import VizijaBlock from '../components/VizijaBlock'
 import { AMBASSADOR_URL } from '../utils/constants'
 import useTranslation from '../utils/useTranslation'
 
-function renderGradientWord(title) {
-  const parts = title.split(/(zdravje|prihodnost|prihodnosti)/i)
+function renderHeroTitle(title) {
+  const parts = title.split(/(generacija|prihodnost|prihodnosti|zdravje)/i)
 
   return parts.map((part, index) => {
+    if (/^generacija$/i.test(part)) {
+      return (
+        <span className="domov-hero-title-accent" key={`${part}-${index}`}>
+          {part}
+        </span>
+      )
+    }
+
     if (/^zdravje$/i.test(part)) {
       return (
         <span className="gradient-word" key={`${part}-${index}`}>
@@ -68,7 +76,7 @@ export default function Domov() {
               {t('domov.hero_label')}
             </p>
             <h1 className="section-title">
-              {renderGradientWord(t('domov.hero_title'))}
+              {renderHeroTitle(t('domov.hero_title'))}
             </h1>
             <p className="hero-subtitle" data-reveal data-reveal-delay="220">
               {t('domov.hero_subtitle')}
