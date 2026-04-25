@@ -4811,6 +4811,14 @@
     padding-block: 0;
   }
 
+  .domov-hero .section-title {
+    font-size: clamp(2.8rem, 10vw, 3.8rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    max-width: 12ch;
+    text-wrap: balance;
+  }
+
   .domov-hero .section-context,
   .domov-hero .section-title,
   .domov-hero .section-title span,
@@ -4823,6 +4831,12 @@
     background: none;
     color: #ffffff;
     -webkit-text-fill-color: #ffffff;
+  }
+
+  .domov-hero .domov-hero-title-accent,
+  .domov-hero .plum-word-bold {
+    color: #43d1ab;
+    -webkit-text-fill-color: #43d1ab;
   }
 
   .domov-hero .hero-subtitle {
